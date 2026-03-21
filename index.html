@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosa do Deserto | Cultivo & Comércio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style/styles-base.css" />
+  <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/plantio.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Rosa do Deserto</a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="plantio.html">Plantio</a>
+        <a href="mudas.html">Mudas / Espécies</a>
+        <a href="caudex.html">Caudex</a>
+        <a href="enxertia.html">Enxertia</a>
+        <a href="podas.html">Podas</a>
+        <a href="polinizacao.html">Polinização</a>
+        <a href="crescimento.html">Crescimento</a>
+        <a href="logistica.html">Logística</a>
+      </nav>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Alternar menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <small>Oásis Digital | Adenium obesum</small>
+        <h1>Rosa do Deserto: cultivo, comércio e conhecimento</h1>
+        <p>Plante, crie e venda com responsabilidade. Aprenda as técnicas essenciais para obter sucesso no cultivo de Adenium obesum e monitore sua logística até o cliente.</p>
+        <div class="hero-actions">
+          <a href="plantio.html" class="btn btn-primary">Explorar Cultivo</a>
+          <a href="logistica.html" class="btn btn-secondary">Ver Logística</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpis" aria-label="Indicadores-chave">
+      <div class="container kpi-grid">
+        <article class="kpi">
+          <h3>Sucesso de cultivo</h3>
+          <p>85% média nacional com boas práticas</p>
+        </article>
+        <article class="kpi">
+          <h3>Tempo médio</h3>
+          <p>4 a 6 semanas para enraizamento</p>
+        </article>
+        <article class="kpi">
+          <h3>Custo estimado</h3>
+          <p>R$ 30 - R$ 80 por muda inicial</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-metrics-section" aria-label="KPI e Galeria complementar">
+      <div class="container">
+        <h2>KPIs Resumidos</h2>
+        <div class="kpi-grid">
+          <article class="kpi"><h3>Germinação</h3><p>90% com substrato drenante</p></article>
+          <article class="kpi"><h3>Bolsa de preço</h3><p>R$120-R$220/muda</p></article>
+          <article class="kpi"><h3>Taxa de retenção</h3><p>80% no transporte</p></article>
+        </div>
+        <h3>Galeria recomendada</h3>
+        <div class="gallery-options">
+          <figure><img src="imagnes/plantio/plantio.jpg" alt="Muda saudável"/><figcaption>Muda pronta para transplante</figcaption></figure>
+          <figure><img src="imagnes/plantio/plantio_.png" alt="Caudex em desenvolvimento"/><figcaption>Caudex em formação</figcaption></figure>
+          <figure><img src="imagnes/Fotos%20Venda/foto_venda.jpg" alt="Planta pronta para venda"/><figcaption>foto venda</figcaption></figure>
+        </div>
+        <div class="graficos">
+          <div class="grafico"><h4>Produção mensal</h4><canvas id="barChart"></canvas></div>
+          <div class="grafico"><h4>Crescimento (cm)</h4><canvas id="lineChart"></canvas></div>
+          <div class="grafico"><h4>Desempenho</h4><canvas id="radarChart"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-section" aria-labelledby="carousel-heading">
+      <div class="container">
+        <h2 id="carousel-heading">Destaques da Semana</h2>
+        <div class="carousel" id="carousel">
+          <div class="carousel-card active">
+            <img src="imagnes/plantio/plantiio__.jpg" alt="Rosa do Deserto Vermelha" />
+            <div class="carousel-card-content">
+              <h3>Rosa do Deserto Vermelha</h3>
+              <p class="price">R$ 135,00</p>
+              <p>Variedade clássica, ideal para cultivo em clima quente e exposição solar intensa.</p>
+              <div class="card-actions">
+                <button class="btn btn-primary">Comprar</button>
+                <a class="btn btn-outline" href="mudas.html">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="imagnes/plantio/plantio.jpg" alt="Rosa do Deserto Branca" />
+            <div class="carousel-card-content">
+              <h3>Rosa do Deserto Branca</h3>
+              <p class="price">R$ 150,00</p>
+              <p>Resistente e elegante, perfeita para coleções de jardins e estufas.</p>
+              <div class="card-actions">
+                <button class="btn btn-primary">Comprar</button>
+                <a class="btn btn-outline" href="mudas.html">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="imagnes/plantio/plantio_.png" alt="Rosa do Deserto Rosa" />
+            <div class="carousel-card-content">
+              <h3>Rosa do Deserto Rosa Premium</h3>
+              <p class="price">R$ 180,00</p>
+              <p>Flor exuberante e exibida com cores saturadas, excelente para propagação comercial.</p>
+              <div class="card-actions">
+                <button class="btn btn-primary">Comprar</button>
+                <a class="btn btn-outline" href="mudas.html">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="imagnes/Fotos%20Venda/foto_venda_.jpg" alt="Rosa do Deserto colecionavel" />
+            <div class="carousel-card-content">
+              <h3>Rosa do Deserto Amarela Clássica</h3>
+              <p class="price">R$ 165,00</p>
+              <p>Rara e chamativa, com ótima aceitação de mercado.</p>
+              <div class="card-actions">
+                <button class="btn btn-primary">Comprar</button>
+                <a class="btn btn-outline" href="mudas.html">Saiba mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button id="prevBtn" aria-label="Anterior">←</button>
+          <button id="nextBtn" aria-label="Próximo">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section" id="mapa" aria-labelledby="mapa-heading">
+      <div class="container">
+        <h2 id="mapa-heading">Mapa do Brasil - Clima e Cultivo</h2>
+        <p>Interaja com o seu estado para receber indicações de temperatura, umidade, dificuldade e sugestões do substrato.</p>
+
+        <div class="map-wrapper">
+          <div class="map-image">
+            <img src="imagnes/mapadf.png" alt="Mapa de demonstração do Brasil para cultivo" />
+          </div>
+          <div class="map-grid" id="mapGrid"></div>
+          <aside class="map-info" id="mapInfo">
+            <h3>Selecione um estado</h3>
+            <p><strong>Região:</strong> --</p>
+            <p><strong>Temperatura média:</strong> -- °C</p>
+            <p><strong>Umidade:</strong> -- %</p>
+            <p><strong>Dificuldade:</strong> --</p>
+            <p><strong>Principais desafios:</strong> --</p>
+            <p><strong>Recomendações:</strong> --</p>
+            <p><strong>Substrato recomendado:</strong> --</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section" id="video">
+      <div class="container">
+        <h2>Aprenda o Básico em Vídeos</h2>
+        <p>Conheça os primeiros passos do cultivo de Rosa do Deserto com nossa série de tutoriais.</p>
+        <div class="video-container">
+          <div class="video-wrapper">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tutorial Rosa do Deserto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <h3>Introdução ao Cultivo</h3>
+            <p>Descubra como começar seu cultivo de Rosa do Deserto com segurança e eficiência. Neste vídeo, cobrimos os fundamentos: seleção de sementes, preparação do solo, técnicas de irrigação e muito mais.</p>
+            <a href="plantio.html" class="btn btn-primary">Explorar Plantio em Detalhes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="knowledge-path" id="jornada">
+      <div class="container">
+        <h2>Vamos semear conhecimento para colher sabedoria!</h2>
+        <p>Siga nosso caminho de aprendizado estruturado, começando pelo plantio e evoluindo até a comercialização.</p>
+        <div class="learning-path">
+          <div class="path-step">
+            <div class="step-number">1</div>
+            <h3>Plantio</h3>
+            <p>Aprenda técnicas essenciais de plantio</p>
+            <a href="plantio.html" class="btn btn-outline">Começar</a>
+          </div>
+          <div class="path-arrow">→</div>
+          <div class="path-step">
+            <div class="step-number">2</div>
+            <h3>Mudas & Espécies</h3>
+            <p>Conheça as variedades disponíveis</p>
+            <a href="mudas.html" class="btn btn-outline">Explorar</a>
+          </div>
+          <div class="path-arrow">→</div>
+          <div class="path-step">
+            <div class="step-number">3</div>
+            <h3>Caudex</h3>
+            <p>Domine a formação de tronco</p>
+            <a href="caudex.html" class="btn btn-outline">Aprender</a>
+          </div>
+          <div class="path-arrow">→</div>
+          <div class="path-step">
+            <div class="step-number">4</div>
+            <h3>Enxertia</h3>
+            <p>Técnicas avançadas de enxertia</p>
+            <a href="enxertia.html" class="btn btn-outline">Dominar</a>
+          </div>
+        </div>
+        <div class="learning-path">
+          <div class="path-step">
+            <div class="step-number">5</div>
+            <h3>Podas</h3>
+            <p>Técnicas de poda profissional</p>
+            <a href="podas.html" class="btn btn-outline">Praticar</a>
+          </div>
+          <div class="path-arrow">→</div>
+          <div class="path-step">
+            <div class="step-number">6</div>
+            <h3>Polinização</h3>
+            <p>Maximize sua produção floral</p>
+            <a href="polinizacao.html" class="btn btn-outline">Conhecer</a>
+          </div>
+          <div class="path-arrow">→</div>
+          <div class="path-step">
+            <div class="step-number">7</div>
+            <h3>Crescimento</h3>
+            <p>Acelere o desenvolvimento</p>
+            <a href="crescimento.html" class="btn btn-outline">Otimizar</a>
+          </div>
+          <div class="path-arrow">→</div>
+          <div class="path-step">
+            <div class="step-number">8</div>
+            <h3>Logística</h3>
+            <p>Venda e entrega profissional</p>
+            <a href="logistica.html" class="btn btn-outline">Comercializar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Rosa do Deserto. Todos os direitos reservados.</p>
+      <p>Projeto demonstrativo de site educativo e comercial.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+.mudas-page {
+  padding-bottom: 2rem;
+}
+
+.mudas-page .hero-mudas {
+  text-align: center;
+  padding: 3.2rem 1rem 2.4rem;
+}
+
+.mudas-page .hero-mudas small {
+  color: #7d6547;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mudas-page .hero-mudas h1 {
+  margin: 0.5rem 0 0.7rem;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+}
+
+.mudas-page .hero-mudas p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #5f4f3a;
+}
+
+.mudas-page .section {
+  margin-top: 1.5rem;
+}
+
+.mudas-page .section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mudas-page .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.mudas-page .card {
+  background: #fff;
+  border: 1px solid #e2d7c7;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.mudas-page .card ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1rem;
+  color: #5d5138;
+}
+
+.mudas-page .badge {
+  display: inline-block;
+  padding: 0.28rem 0.62rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.mudas-page .sucesso { background: #e3f3df; color: #1c6d2f; }
+.mudas-page .alerta { background: #fff2d6; color: #995d00; }
+.mudas-page .premium { background: #efe1fb; color: #5c2f85; }
+
+.mudas-page .tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e2d7c7;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.mudas-page .tabela th {
+  background: #c37a35;
+  color: #fff;
+  padding: 0.72rem;
+  text-align: center;
+}
+
+.mudas-page .tabela td {
+  padding: 0.72rem;
+  border-top: 1px solid #efe5d8;
+  text-align: center;
+}
+
+.mudas-page .mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.8rem;
+}
+
+.mudas-page .mini-card {
+  background: #fff;
+  border: 1px solid #e2d7c7;
+  border-radius: 0.7rem;
+  padding: 0.9rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mudas-page .nota-valor {
+  margin-top: 0.8rem;
+  text-align: center;
+  color: #7a6245;
+  font-weight: 600;
+}
+
+.mudas-page .cores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: center;
+}
+
+.mudas-page .cor {
+  padding: 0.38rem 0.78rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mudas-page .rosa { background: #de3f83; }
+.mudas-page .vermelha { background: #cc3232; }
+.mudas-page .branca { background: #e6e2dd; color: #403424; }
+.mudas-page .roxa { background: #6d3597; }
+.mudas-page .amarela { background: #e8be33; color: #3b2e16; }
+.mudas-page .mesclada { background: linear-gradient(45deg, #de3f83, #e8be33, #6d3597); }
+
+.mudas-page .mudas-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.mudas-page .mudas-gallery figure {
+  margin: 0;
+  border: 1px solid #e2d7c7;
+  background: #fff;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.mudas-page .mudas-gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.mudas-page .mudas-gallery figcaption {
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  color: #5f4f3a;
+}
+
+.mudas-page .mudas-graficos {
+  margin-top: 0.8rem;
+}
+
+.mudas-page .conclusao {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid #e2d7c7;
+  border-radius: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fff3e0, #fdf8f0);
+}
+
+@media (max-width: 700px) {
+  .mudas-page .tabela {
+    font-size: 0.87rem;
+  }
+
+  .mudas-page .hero-mudas {
+    padding-top: 2.5rem;
+  }
+}

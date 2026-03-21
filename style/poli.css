@@ -1,0 +1,167 @@
+.polinizacao-page {
+  padding-bottom: 2rem;
+}
+
+.polinizacao-page .hero-polinizacao {
+  text-align: center;
+  padding: 3.2rem 1rem 2.4rem;
+}
+
+.polinizacao-page .hero-polinizacao small {
+  color: #7a6246;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.polinizacao-page .hero-polinizacao h1 {
+  margin: 0.5rem 0 0.8rem;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+}
+
+.polinizacao-page .hero-polinizacao p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #5d4f3d;
+}
+
+.polinizacao-page .section {
+  margin-top: 1.6rem;
+}
+
+.polinizacao-page .section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.polinizacao-page .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.polinizacao-page .card {
+  background: #fff;
+  border: 1px solid #e4d8c8;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.polinizacao-page .poli-steps {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e4d8c8;
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem 1.2rem 2rem;
+}
+
+.polinizacao-page .poli-steps li {
+  margin-bottom: 0.75rem;
+  color: #564939;
+}
+
+.polinizacao-page .poli-graficos {
+  margin-top: 0.8rem;
+}
+
+.polinizacao-page .tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e4d8c8;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.polinizacao-page .tabela th {
+  background: #c37a35;
+  color: #fff;
+  padding: 0.72rem;
+  text-align: center;
+}
+
+.polinizacao-page .tabela td {
+  padding: 0.72rem;
+  border-top: 1px solid #efe4d6;
+  text-align: center;
+}
+
+.polinizacao-page .poli-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.polinizacao-page .poli-gallery figure {
+  margin: 0;
+  border: 1px solid #e4d8c8;
+  background: #fff;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.polinizacao-page .poli-gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.polinizacao-page .poli-gallery figcaption {
+  padding: 0.7rem;
+  color: #5d4f3d;
+  font-size: 0.9rem;
+}
+
+.polinizacao-page .poli-simulador {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.polinizacao-page .simulador-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+  margin-bottom: 0.8rem;
+}
+
+.polinizacao-page .simulador-grid label {
+  font-weight: 700;
+  color: #4f422f;
+}
+
+.polinizacao-page .simulador-grid select {
+  border: 1px solid #d6c7b2;
+  border-radius: 0.6rem;
+  padding: 0.55rem;
+}
+
+.polinizacao-page .checkline {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.polinizacao-page .simulador-resultado {
+  margin-top: 0.9rem;
+  background: #fff8ef;
+  border: 1px dashed #d4bea2;
+  border-radius: 0.7rem;
+  padding: 0.8rem;
+}
+
+.polinizacao-page .conclusao {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid #e4d8c8;
+  border-radius: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fff3e0, #fdf8f0);
+}
+
+@media (max-width: 700px) {
+  .polinizacao-page .tabela {
+    font-size: 0.86rem;
+  }
+}

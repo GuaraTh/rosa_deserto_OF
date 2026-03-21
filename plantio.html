@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plantio | Rosa do Deserto</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style/styles-base.css" />
+  <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/plantio.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Rosa do Deserto</a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="plantio.html">Plantio</a>
+        <a href="mudas.html">Mudas / Espécies</a>
+        <a href="caudex.html">Caudex</a>
+        <a href="enxertia.html">Enxertia</a>
+        <a href="podas.html">Podas</a>
+        <a href="polinizacao.html">Polinização</a>
+        <a href="crescimento.html">Crescimento</a>
+        <a href="logistica.html">Logística</a>
+      </nav>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Alternar menu">☰</button>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero-plantio">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <small>Oásis Digital | Adenium obesum</small>
+        <h1>Processo Completo de Plantio da Rosa do Deserto</h1>
+        <p>Do cultivo inicial à floração: guia técnico, visual e estratégico</p>
+        <div class="hero-actions">
+          <a href="#processo" class="btn btn-primary">Ver Processo</a>
+          <a href="#metodos" class="btn btn-secondary">Comparar Métodos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="plantio-overview" id="processo">
+      <div class="container">
+        <h2>Visão Geral do Processo</h2>
+        <div class="plantio-overview-grid">
+          <article class="overview-card"><span>1</span><h3>Preparar</h3><p>Escolha vaso, drenagem e substrato técnico.</p></article>
+          <article class="overview-card"><span>2</span><h3>Semear</h3><p>Posicione semente ou muda na profundidade correta.</p></article>
+          <article class="overview-card"><span>3</span><h3>Estabilizar</h3><p>Controle água, luminosidade e temperatura.</p></article>
+          <article class="overview-card"><span>4</span><h3>Conduzir</h3><p>Transplante, exponha caudex e corrija estrutura.</p></article>
+          <article class="overview-card"><span>5</span><h3>Valorizar</h3><p>Defina método, estética e meta comercial.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="plantio-media-showcase" id="galeria-plantio">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Galeria do Plantio</h2>
+          <p>Sequência visual com fotos menores e melhor leitura do processo.</p>
+        </div>
+        <div class="plantio-photo-grid">
+          <figure class="plantio-photo-card featured">
+            <img src="imagnes/Fotos Plantio/plantiio__.jpg" alt="Processo completo de plantio" />
+            <figcaption>Plantiio  - montagem inicial do plantio.</figcaption>
+          </figure>
+          <figure class="plantio-photo-card">
+            <img src="imagnes/Fotos Plantio/plantio.jpg" alt="Plantio em vaso" />
+            <figcaption>Plantio - muda estabilizada em vaso drenante.</figcaption>
+          </figure>
+          <figure class="plantio-photo-card">
+            <img src="imagnes/Fotos Plantio/plantio_.png" alt="Transplante e caudex" />
+            <figcaption>Plantio  - transição para caudex exposto.</figcaption>
+          </figure>
+          <figure class="plantio-photo-card">
+            <img src="imagnes/Fotos Germinação/geminação.jpeg" alt="Germinação" />
+            <figcaption>Geminação - fase inicial controlada.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="guia-basico">
+      <div class="container">
+        <h2>Guia Técnico de Plantio</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">🏺</div>
+            <h3>Escolha do vaso</h3>
+            <p>Use vasos com boa drenagem, tamanho médio inicialmente.</p>
+            <p><strong>Erro comum:</strong> Vaso muito grande causa encharcamento.</p>
+            <p><strong>Dica:</strong> Prefira cerâmica ou plástico resistente.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🚰</div>
+            <h3>Sistema de drenagem</h3>
+            <p>Coloque pedras ou areia no fundo para evitar água parada.</p>
+            <p><strong>Erro comum:</strong> Sem drenagem leva à podridão.</p>
+            <p><strong>Dica:</strong> Use furos no vaso e camada de 2-3 cm.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🌱</div>
+            <h3>Preparação do substrato</h3>
+            <p>Misture areia, terra e perlita em partes iguais.</p>
+            <p><strong>Erro comum:</strong> Solo argiloso retém muita água.</p>
+            <p><strong>Dica:</strong> pH 6.0-7.0, evite húmus puro.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🌿</div>
+            <h3>Plantio</h3>
+            <p>Sementes a 1 cm, mudas na superfície.</p>
+            <p><strong>Erro comum:</strong> Plantar muito fundo.</p>
+            <p><strong>Dica:</strong> Cubra levemente e pressione suavemente.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">☀️</div>
+            <h3>Rega e luz solar</h3>
+            <p>Rega baixa, solo seco entre regas. Luz indireta.</p>
+            <p><strong>Erro comum:</strong> Excesso de água.</p>
+            <p><strong>Dica:</strong> Regue 2-3 vezes por semana no início.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpis">
+      <div class="container">
+        <h2>KPIs do Cultivo</h2>
+        <div class="kpi-grid">
+          <div class="kpi">
+            <div class="kpi-icon">🌡️</div>
+            <h3>Temperatura ideal</h3>
+            <p>25–32°C</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-icon">💧</div>
+            <h3>Frequência de rega</h3>
+            <p>Baixa (solo seco)</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-icon">🌱</div>
+            <h3>Taxa de germinação</h3>
+            <p>70% – 95%</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-icon">⏳</div>
+            <h3>Tempo de germinação</h3>
+            <p>7–14 dias</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-icon">🌸</div>
+            <h3>Tempo até floração</h3>
+            <p>Semente 12–24 meses, Estaca 6–12 meses</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-icon">🪴</div>
+            <h3>Vida útil</h3>
+            <p>+20 anos</p>
+          </div>
+          <div class="kpi">
+            <div class="kpi-icon">💰</div>
+            <h3>Custo médio</h3>
+            <p>Sementes R$10–20, Muda enxertada R$30–80</p>
+          </div>
+        </div>
+        <div class="graficos">
+          <div class="grafico">
+            <h4>Tempo por método</h4>
+            <canvas id="barChart"></canvas>
+          </div>
+          <div class="grafico">
+            <h4>Evolução do crescimento</h4>
+            <canvas id="lineChart"></canvas>
+          </div>
+          <div class="grafico">
+            <h4>Comparativo de desempenho</h4>
+            <canvas id="radarChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="metodos" id="metodos">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Métodos de Plantio</h2>
+          <p>Comparação clara entre velocidade, estética e retorno.</p>
+        </div>
+        <div class="metodos-layout">
+          <table class="comparativo">
+            <thead>
+              <tr>
+                <th>Método</th>
+                <th>Tempo</th>
+                <th>Caudex</th>
+                <th>Dificuldade</th>
+                <th>Custo</th>
+                <th>Sucesso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Semente</td>
+                <td>Alto</td>
+                <td>Alto</td>
+                <td>Médio</td>
+                <td>Baixo</td>
+                <td>70–95%</td>
+              </tr>
+              <tr>
+                <td>Estaca</td>
+                <td>Médio</td>
+                <td>Médio</td>
+                <td>Baixo</td>
+                <td>Médio</td>
+                <td>80–95%</td>
+              </tr>
+              <tr>
+                <td>Enxerto</td>
+                <td>Baixo</td>
+                <td>Alto</td>
+                <td>Médio</td>
+                <td>Alto</td>
+                <td>Alto</td>
+              </tr>
+              <tr>
+                <td>Alporquia</td>
+                <td>Médio</td>
+                <td>Alto</td>
+                <td>Médio</td>
+                <td>Médio</td>
+                <td>80–90%</td>
+              </tr>
+            </tbody>
+          </table>
+          <aside class="metodo-highlight card">
+            <h3>Leitura rápida</h3>
+            <p><strong>Semente:</strong> melhor formação natural e valor de longo prazo.</p>
+            <p><strong>Estaca:</strong> acelera produção, porém com menor expressão de caudex.</p>
+            <p><strong>Enxerto:</strong> ideal para giro comercial e previsibilidade floral.</p>
+            <p><strong>Alporquia:</strong> opção intermediária com bom aproveitamento estrutural.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="erros">
+      <div class="container">
+        <h2>Erros Comuns no Plantio</h2>
+        <div class="erros-grid">
+          <div class="erro">
+            <div class="erro-icon">❌</div>
+            <h3>Excesso de água</h3>
+            <p>Consequência: Podridão das raízes.</p>
+            <p>Como evitar: Regue apenas quando o solo estiver seco.</p>
+          </div>
+          <div class="erro">
+            <div class="erro-icon">❌</div>
+            <h3>Falta de sol</h3>
+            <p>Consequência: Crescimento lento e fraco.</p>
+            <p>Como evitar: Mantenha em luz indireta intensa.</p>
+          </div>
+          <div class="erro">
+            <div class="erro-icon">❌</div>
+            <h3>Solo compactado</h3>
+            <p>Consequência: Má drenagem e raízes sufocadas.</p>
+            <p>Como evitar: Use substrato drenante.</p>
+          </div>
+          <div class="erro">
+            <div class="erro-icon">❌</div>
+            <h3>Vaso inadequado</h3>
+            <p>Consequência: Raízes apodrecem ou crescem demais.</p>
+            <p>Como evitar: Escolha vaso com furos e tamanho adequado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="transplante">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Transplante e Manutenção</h2>
+          <p>Organize o replantio para fortalecer estrutura, raiz e exposição do caudex.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Quando trocar vaso</h3>
+            <p>A cada 1-2 anos ou quando raízes saírem pelos furos.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Como expor o caudex</h3>
+            <p>Remova solo gradualmente para mostrar a base grossa.</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Frequência</h3>
+            <p>1-2 anos, preferencialmente na primavera.</p>
+          </div>
+        </div>
+        <div class="animacao" id="caudexAnimacao">
+          <div class="caudex-shape"></div>
+          <p>Elevação do caudex ao longo do tempo</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="solo-vaso">
+      <div class="container">
+        <h2>Plantio no Solo vs Vaso</h2>
+        <div class="comparacao">
+          <div class="lado">
+            <h3>Vaso</h3>
+            <ul>
+              <li>Controle maior sobre condições</li>
+              <li>Menos pragas e doenças</li>
+              <li>Fácil movimentação</li>
+            </ul>
+          </div>
+          <div class="lado">
+            <h3>Solo</h3>
+            <ul>
+              <li>Crescimento mais livre</li>
+              <li>Mais espaço para raízes</li>
+              <li>Mais riscos de pragas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="avancados">
+      <div class="container">
+        <h2>Métodos Avançados</h2>
+        <details>
+          <summary>Alporquia</summary>
+          <p>Tempo: Médio. Taxa de sucesso: 80-90%. Complexidade: Média.</p>
+        </details>
+        <details>
+          <summary>Cultura de tecidos</summary>
+          <p>Tempo: Alto. Taxa de sucesso: Alta. Complexidade: Alta.</p>
+        </details>
+        <details>
+          <summary>Polinização manual</summary>
+          <p>Tempo: Baixo. Taxa de sucesso: Alta. Complexidade: Baixa.</p>
+        </details>
+        <details>
+          <summary>Germinação em papel</summary>
+          <p>Tempo: Baixo. Taxa de sucesso: 70-90%. Complexidade: Baixa.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="estilos">
+      <div class="container">
+        <h2>Referências Visuais de Plantio</h2>
+        <div class="galeria">
+          <div class="estilo">
+            <img src="imagnes/Fotos Plantio/plantio.jpg" alt="Plantio em vaso" />
+            <h3>Plantio em vaso</h3>
+          </div>
+          <div class="estilo">
+            <img src="imagnes/Fotos Plantio/plantiio__.jpg" alt="Implantacao inicial" />
+            <h3>Implantação inicial</h3>
+          </div>
+          <div class="estilo">
+            <img src="imagnes/Fotos Plantio/plantio_.png" alt="Transplante tecnico" />
+            <h3>Transplante técnico</h3>
+          </div>
+          <div class="estilo">
+            <img src="imagnes/Fotos Germinação/geminação.jpeg" alt="Germinacao assistida" />
+            <h3>Germinação assistida</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dados Técnicos -->
+    <section class="dados-tecnicos">
+      <div class="container">
+        <h2>Dados Técnicos</h2>
+        <ul>
+          <li>pH ideal: 6,0–7,0</li>
+          <li>Substrato ideal: drenante</li>
+          <li>Não usar: húmus puro</li>
+          <li>Não usar: prato com água</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Interatividade Extra -->
+    <section class="interatividade">
+      <div class="container">
+        <h2>Simulador</h2>
+        <p>Escolha seu método e veja o tempo até floração</p>
+        <select id="metodoSimulador">
+          <option>Semente</option>
+          <option>Estaca</option>
+          <option>Enxerto</option>
+          <option>Alporquia</option>
+        </select>
+        <p id="resultadoSimulador">Tempo estimado: 12-24 meses</p>
+      </div>
+    </section>
+
+    <!-- Botão Final -->
+    <section class="final">
+      <div class="container">
+        <button class="btn btn-primary">Seguimos cultivando</button>
+        <a href="mudas.html" class="btn btn-secondary">Próximo: Mudas / Espécies</a>
+      </div>
+    </section>
+
+    <section class="page-metrics-section" aria-label="Resumo complementar Plantio">
+      <div class="container">
+        <h2>Resumo rápido de KPIs</h2>
+        <div class="kpi-grid">
+          <article class="kpi"><h3>Sucesso médio</h3><p>88% (total do processo)</p></article>
+          <article class="kpi"><h3>Rotina de rega</h3><p>2-3 vezes/semana</p></article>
+          <article class="kpi"><h3>Tempo para comercial</h3><p>8-16 meses</p></article>
+        </div>
+        <h3>Galeria de resultados rápidos</h3>
+        <div class="gallery-options">
+          <figure><img src="imagnes/Fotos%20Germina%C3%A7%C3%A3o/gemina%C3%A7%C3%A3o.jpeg" alt="Germinacao controlada"/><figcaption>germinacao</figcaption></figure>
+          <figure><img src="imagnes/plantio/plantiio__.jpg" alt="Mudas em crescimento"/><figcaption>Fase 1-2 meses</figcaption></figure>
+          <figure><img src="imagnes/plantio/plantio_.png" alt="Exemplo de caudex"/><figcaption>Caudex formado</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Rosa do Deserto. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

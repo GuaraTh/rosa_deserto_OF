@@ -1,0 +1,75 @@
+/* HERO */
+.caudex-page .hero-caudex {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+/* CARDS */
+.caudex-page .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.caudex-page .card {
+  background: #fff;
+  border: 1px solid #e2d7c7;
+  border-radius: 0.9rem;
+  padding: 1.2rem;
+  transition: 0.3s;
+}
+
+.caudex-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* TIMELINE */
+.caudex-page .timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.caudex-page .timeline-item {
+  background: #fff;
+  border: 1px solid #e2d7c7;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+}
+
+/* TABELA */
+.caudex-page .tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.caudex-page .tabela th {
+  background: #c37a35;
+  color: white;
+  padding: 0.7rem;
+}
+
+.caudex-page .tabela td {
+  text-align: center;
+  padding: 0.6rem;
+  border-bottom: 1px solid #e2d7c7;
+}
+
+/* ERROS */
+.caudex-page .erro {
+  color: #c62828;
+  font-weight: 600;
+}
+
+/* CONCLUSÃO */
+.caudex-page .conclusao {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #fff3e0;
+  border-radius: 0.9rem;
+  text-align: center;
+}

@@ -1,0 +1,188 @@
+.podas-page {
+  padding-bottom: 2rem;
+}
+
+.podas-page .hero-podas {
+  text-align: center;
+  padding: 3.2rem 1rem 2.4rem;
+}
+
+.podas-page .hero-podas small {
+  color: #7a6144;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.podas-page .hero-podas h1 {
+  margin: 0.5rem 0 0.8rem;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+}
+
+.podas-page .hero-podas p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #5b4c3a;
+}
+
+.podas-page .section {
+  margin-top: 1.6rem;
+}
+
+.podas-page .section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.podas-page .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.podas-page .card {
+  background: #fff;
+  border: 1px solid #e4d8c8;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.podas-page .card ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1rem;
+  color: #5c4e3b;
+}
+
+.podas-page .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.podas-page .destaque-ok {
+  border-left: 4px solid #2f7d36;
+  background: #f4faf2;
+}
+
+.podas-page .destaque-alerta {
+  border-left: 4px solid #b4612f;
+  background: #fff8f2;
+}
+
+.podas-page .podas-steps {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.2rem 1.4rem 1.2rem 2rem;
+  background: #fff;
+  border: 1px solid #e4d8c8;
+  border-radius: 1rem;
+}
+
+.podas-page .podas-steps li {
+  margin-bottom: 0.75rem;
+  color: #534733;
+}
+
+.podas-page .podas-graficos {
+  margin-top: 0.8rem;
+}
+
+.podas-page .podas-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.podas-page .podas-gallery figure {
+  margin: 0;
+  border: 1px solid #e4d8c8;
+  background: #fff;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.podas-page .podas-gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.podas-page .podas-gallery figcaption {
+  padding: 0.7rem;
+  color: #5d4e3a;
+  font-size: 0.9rem;
+}
+
+.podas-page .tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e4d8c8;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.podas-page .tabela th {
+  background: #c37a35;
+  color: #fff;
+  padding: 0.72rem;
+  text-align: center;
+}
+
+.podas-page .tabela td {
+  padding: 0.72rem;
+  border-top: 1px solid #efe4d6;
+  text-align: center;
+}
+
+.podas-page .podas-simulador {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.podas-page .simulador-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+  margin-bottom: 0.8rem;
+}
+
+.podas-page .simulador-grid label {
+  font-weight: 700;
+  color: #4f412f;
+}
+
+.podas-page .simulador-grid select {
+  border: 1px solid #d6c7b2;
+  border-radius: 0.6rem;
+  padding: 0.55rem;
+}
+
+.podas-page .simulador-resultado {
+  margin-top: 0.9rem;
+  background: #fff8ef;
+  border: 1px dashed #d4bea2;
+  border-radius: 0.7rem;
+  padding: 0.8rem;
+}
+
+.podas-page .aviso-toxicidade {
+  border-left: 4px solid #c24838;
+  background: #fff4f2;
+}
+
+.podas-page .conclusao {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid #e4d8c8;
+  border-radius: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fff3e0, #fdf8f0);
+}
+
+@media (max-width: 700px) {
+  .podas-page .tabela {
+    font-size: 0.86rem;
+  }
+}

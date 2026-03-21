@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mudas | Rosa do Deserto</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style/styles-base.css" />
+  <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/mudas.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
+ 
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Rosa do Deserto</a>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="plantio.html">Plantio</a>
+        <a href="mudas.html">Mudas / Espécies</a>
+        <a href="caudex.html">Caudex</a>
+        <a href="enxertia.html">Enxertia</a>
+        <a href="podas.html">Podas</a>
+        <a href="polinizacao.html">Polinização</a>
+        <a href="crescimento.html">Crescimento</a>
+        <a href="logistica.html">Logística</a>
+      </nav>
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Alternar menu">☰</button>
+    </div>
+  </header>
+
+
+<main class="container mudas-page">
+  <section class="hero-mudas">
+    <small>Catálogo Técnico | Adenium obesum</small>
+    <h1>Mudas de Rosa do Deserto: análise completa</h1>
+    <p>Comparação profissional entre semente, estaquia e enxerto com foco em qualidade estética, velocidade e valor de mercado.</p>
+  </section>
+
+  <section class="section" aria-label="Tipos principais de muda">
+    <h2>1. Tipos de Muda</h2>
+    <div class="cards-grid">
+      <article class="card">
+        <span class="badge sucesso">Sementeira</span>
+        <h3>Muda por Semente</h3>
+        <ul>
+          <li>Desenvolve caudex mais forte e estético.</li>
+          <li>Cada planta é única em forma e genética.</li>
+          <li>Mais resistente no longo prazo.</li>
+          <li>Floração mais lenta e cor imprevisível.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="badge alerta">Estaquia</span>
+        <h3>Muda por Galho</h3>
+        <ul>
+          <li>Clonagem fiel da planta mãe.</li>
+          <li>Crescimento mais rápido e previsível.</li>
+          <li>Menor formação de caudex.</li>
+          <li>Menor valor ornamental em geral.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <span class="badge premium">Premium</span>
+        <h3>Muda Enxertada</h3>
+        <ul>
+          <li>Cor da flor garantida e floração antecipada.</li>
+          <li>Alta aplicação comercial e múltiplos enxertos.</li>
+          <li>Grande variedade de cores e combinações.</li>
+          <li>Pode ter menor durabilidade que muda de semente.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Comparativo técnico">
+    <h2>2. Comparativo Técnico</h2>
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th>Critério</th>
+          <th>Semente</th>
+          <th>Estaquia</th>
+          <th>Enxerto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Crescimento</td>
+          <td>Lento</td>
+          <td>Rápido</td>
+          <td>Médio</td>
+        </tr>
+        <tr>
+          <td>Formação de caudex</td>
+          <td>Excelente</td>
+          <td>Baixa</td>
+          <td>Boa</td>
+        </tr>
+        <tr>
+          <td>Previsibilidade da flor</td>
+          <td>Baixa</td>
+          <td>Alta</td>
+          <td>Altíssima</td>
+        </tr>
+        <tr>
+          <td>Valor comercial</td>
+          <td>Médio/Alto</td>
+          <td>Médio</td>
+          <td>Alto</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section" aria-label="KPIs de mudas">
+    <h2>3. KPIs do Viveiro</h2>
+    <div class="kpi-grid">
+      <article class="kpi"><h3>Taxa de pegamento</h3><p>85% - 95%</p></article>
+      <article class="kpi"><h3>Floração média</h3><p>6 - 18 meses</p></article>
+      <article class="kpi"><h3>Valor médio de venda</h3><p>R$ 35 - R$ 180</p></article>
+      <article class="kpi"><h3>Demanda por enxerto</h3><p>Alta no varejo</p></article>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Dashboard de mudas">
+    <h2>4. Dashboard de Desempenho</h2>
+    <div class="graficos mudas-graficos">
+      <div class="grafico"><h4>Tempo de Produção (meses)</h4><canvas id="barChart"></canvas></div>
+      <div class="grafico"><h4>Evolução de Crescimento</h4><canvas id="lineChart"></canvas></div>
+      <div class="grafico"><h4>Perfil Técnico por Método</h4><canvas id="radarChart"></canvas></div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Formato de caudex">
+    <h2>5. Formato do Caudex</h2>
+    <div class="mini-grid">
+      <div class="mini-card">Caudex Alto</div>
+      <div class="mini-card">Caudex Baixo</div>
+      <div class="mini-card">Estilo Bonsai</div>
+      <div class="mini-card">Raiz Exposta</div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Tipologia de flores">
+    <h2>6. Tipos de Flores</h2>
+    <div class="mini-grid">
+      <div class="mini-card">Flor Simples</div>
+      <div class="mini-card">Flor Dobrada</div>
+      <div class="mini-card">Flor Tripla</div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Variação de cores">
+    <h2>7. Variação de Cores</h2>
+    <div class="cores">
+      <span class="cor rosa">Rosa</span>
+      <span class="cor vermelha">Vermelha</span>
+      <span class="cor branca">Branca</span>
+      <span class="cor roxa">Roxa</span>
+      <span class="cor amarela">Amarela</span>
+      <span class="cor mesclada">Mesclada</span>
+    </div>
+    <p class="nota-valor">Cores raras aumentam significativamente o valor da planta no mercado especializado.</p>
+  </section>
+
+  <section class="section" aria-label="Visual de apoio">
+    <h2>8. Formatos de Imagem para Visualização</h2>
+    <div class="mudas-gallery">
+      <figure>
+        <img src="imagnes/plantio/plantio.jpg" alt="Mudas em bancada de viveiro" />
+        <figcaption>Plano geral de lote para avaliação de padrão.</figcaption>
+      </figure>
+      <figure>
+        <img src="imagnes/plantio/plantiio__.jpg" alt="Detalhe de caudex" />
+        <figcaption>Close no caudex para classificação estética.</figcaption>
+      </figure>
+      <figure>
+        <img src="imagnes/plantio/plantio_.png" alt="Muda florida em vaso" />
+        <figcaption>Imagem de catálogo para venda online.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="conclusao">
+    <h2>Conclusão Técnica</h2>
+    <p>Semente, estaquia e enxerto atendem perfis diferentes de produção. A decisão ideal depende de objetivo comercial, tempo de giro e nível de valorização estética desejado.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2026 Rosa do Deserto</p>
+    <p>Painel técnico de mudas com foco em classificação e valor de mercado.</p>
+  </div>
+</footer>
+
+</body>
+</html>

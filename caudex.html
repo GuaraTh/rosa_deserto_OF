@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caudex | Rosa do Deserto</title>
+  <link rel="stylesheet" href="styles.css" />
+ <link rel="stylesheet" href="style/styles-base.css" />
+  <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/caudex.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="script.js"></script>
+ 
+</head>
+
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">Rosa do Deserto</a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="plantio.html">Plantio</a>
+      <a href="mudas.html">Mudas / Espécies</a>
+      <a href="caudex.html">Caudex</a>
+      <a href="enxertia.html">Enxertia</a>
+      <a href="podas.html">Podas</a>
+      <a href="polinizacao.html">Polinização</a>
+      <a href="crescimento.html">Crescimento</a>
+      <a href="logistica.html">Logística</a>
+    </nav>
+    <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Alternar menu">☰</button>
+  </div>
+</header>
+
+<main class="container caudex-page">
+
+<!-- HERO -->
+<section class="hero-caudex">
+  <h1>Formação do Caudex</h1>
+  <p>Estrutura, estética e valorização da Rosa do Deserto</p>
+</section>
+
+<!-- TIPOS -->
+<section class="cards-grid">
+  <article class="card">
+    <h2>Caudex Alto</h2>
+    <p>Visual imponente, muito valorizado para exposição.</p>
+  </article>
+
+  <article class="card">
+    <h2>Caudex Baixo</h2>
+    <p>Mais compacto, ideal para cultivo doméstico.</p>
+  </article>
+
+  <article class="card">
+    <h2>Estilo Bonsai</h2>
+    <p>Formato artístico com raízes trabalhadas.</p>
+  </article>
+
+  <article class="card">
+    <h2>Raiz Exposta</h2>
+    <p>Técnica estética avançada, alto valor comercial.</p>
+  </article>
+</section>
+
+<!-- PROCESSO -->
+<section class="section">
+  <h2>Processo de Formação</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">1. Germinação</div>
+    <div class="timeline-item">2. Crescimento inicial</div>
+    <div class="timeline-item">3. Poda de raiz</div>
+    <div class="timeline-item">4. Elevação do caudex</div>
+    <div class="timeline-item">5. Modelagem estética</div>
+  </div>
+</section>
+
+<!-- COMPARATIVO -->
+<section class="section">
+  <h2>Comparativo Técnico</h2>
+
+  <table class="tabela">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Dificuldade</th>
+        <th>Tempo</th>
+        <th>Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Alto</td>
+        <td>Médio</td>
+        <td>Lento</td>
+        <td>Alto</td>
+      </tr>
+      <tr>
+        <td>Bonsai</td>
+        <td>Alto</td>
+        <td>Muito lento</td>
+        <td>Muito alto</td>
+      </tr>
+      <tr>
+        <td>Raiz exposta</td>
+        <td>Alto</td>
+        <td>Médio</td>
+        <td>Alto</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ERROS -->
+<section class="section">
+  <h2>Erros Comuns</h2>
+
+  <div class="cards-grid">
+    <div class="card erro">Excesso de água</div>
+    <div class="card erro">Falta de poda</div>
+    <div class="card erro">Substrato inadequado</div>
+  </div>
+</section>
+
+<!-- CONCLUSÃO -->
+<section class="conclusao">
+  <h2>Conclusão</h2>
+  <p>
+    O caudex é o principal fator estético e comercial da planta.
+    Técnicas corretas aumentam drasticamente o valor final.
+  </p>
+</section>
+
+</main>
+
+<section class="page-metrics-section" aria-label="Resumo Caudex">
+  <div class="container">
+    <h2>KPIs de Caudex</h2>
+    <div class="kpi-grid">
+      <article class="kpi"><h3>Engrossamento</h3><p>5-8mm/mês</p></article>
+      <article class="kpi"><h3>Podas</h3><p>1 vez a cada 6-8 meses</p></article>
+      <article class="kpi"><h3>Valor agregado</h3><p>+35% no mercado</p></article>
+    </div>
+    <div class="gallery-options">
+      <figure><img src="imagnes/plantio/plantio_.png" alt="Caudex estilo bonsai"/><figcaption>Bonsai com caudex definido</figcaption></figure>
+      <figure><img src="imagnes/plantio/plantiio__.jpg" alt="Caudex alto"/><figcaption>Caudex alto e equilibrado</figcaption></figure>
+      <figure><img src="imagnes/plantio/passo_a_passo_caudex.jpg" alt="Passo a passo do caudex"/><figcaption>passo a passo caudex</figcaption></figure>
+    </div>
+    <div class="graficos">
+      <div class="grafico"><h4>Evolução de caudex</h4><canvas id="barChart"></canvas></div>
+      <div class="grafico"><h4>Dificuldade x Tempo</h4><canvas id="radarChart"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Rosa do Deserto</p>
+</footer>
+
+</body>
+</html>

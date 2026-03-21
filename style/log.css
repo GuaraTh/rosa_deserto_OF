@@ -1,0 +1,137 @@
+.logistica-page {
+  padding-bottom: 2rem;
+}
+
+.logistica-page .hero-logistica {
+  text-align: center;
+  padding: 3.2rem 1rem 2.4rem;
+}
+
+.logistica-page .hero-logistica small {
+  color: #7a6246;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.logistica-page .hero-logistica h1 {
+  margin: 0.5rem 0 0.8rem;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+}
+
+.logistica-page .hero-logistica p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #5d4f3d;
+}
+
+.logistica-page .section {
+  margin-top: 1.6rem;
+}
+
+.logistica-page .section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.logistica-page .card {
+  background: #fff;
+  border: 1px solid #e4d8c8;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.logistica-page .tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e4d8c8;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.logistica-page .tabela th {
+  background: #c37a35;
+  color: #fff;
+  padding: 0.72rem;
+  text-align: center;
+}
+
+.logistica-page .tabela td {
+  padding: 0.72rem;
+  border-top: 1px solid #efe4d6;
+  text-align: center;
+}
+
+.logistica-page .log-simulador {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.logistica-page .simulador-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+  margin-bottom: 0.8rem;
+}
+
+.logistica-page .simulador-grid label {
+  font-weight: 700;
+  color: #4f422f;
+}
+
+.logistica-page .simulador-grid select {
+  border: 1px solid #d6c7b2;
+  border-radius: 0.6rem;
+  padding: 0.55rem;
+}
+
+.logistica-page .simulador-resultado {
+  margin-top: 0.9rem;
+  background: #fff8ef;
+  border: 1px dashed #d4bea2;
+  border-radius: 0.7rem;
+  padding: 0.8rem;
+}
+
+.logistica-page .leilao-box ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1rem;
+}
+
+.logistica-page .log-graficos {
+  margin-top: 0.8rem;
+}
+
+.logistica-page .log-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.logistica-page .log-gallery figure {
+  margin: 0;
+  border: 1px solid #e4d8c8;
+  background: #fff;
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.logistica-page .log-gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.logistica-page .log-gallery figcaption {
+  padding: 0.7rem;
+  color: #5d4f3d;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .logistica-page .tabela {
+    font-size: 0.85rem;
+  }
+}
