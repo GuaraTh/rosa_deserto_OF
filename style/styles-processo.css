@@ -248,3 +248,104 @@ details[open] summary {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Padrao de alinhamento das abas de processo (exceto plantio/index) */
+.caudex-page,
+.mudas-page,
+.enxertia-page,
+.podas-page,
+.polinizacao-page,
+.crescimento-page,
+.logistica-page {
+  text-align: center;
+}
+
+.caudex-page .section-heading,
+.mudas-page .section-heading,
+.enxertia-page .section-heading,
+.podas-page .section-heading,
+.polinizacao-page .section-heading,
+.crescimento-page .section-heading,
+.logistica-page .section-heading,
+.caudex-page .section,
+.mudas-page .section,
+.enxertia-page .section,
+.podas-page .section,
+.polinizacao-page .section,
+.crescimento-page .section,
+.logistica-page .section,
+.caudex-page .conclusao,
+.mudas-page .conclusao,
+.enxertia-page .conclusao,
+.podas-page .conclusao,
+.polinizacao-page .conclusao,
+.crescimento-page .conclusao,
+.logistica-page .conclusao {
+  text-align: center;
+}
+
+.caudex-page .cards-grid,
+.mudas-page .cards-grid,
+.enxertia-page .cards-grid,
+.podas-page .cards-grid,
+.polinizacao-page .cards-grid,
+.crescimento-page .cards-grid,
+.logistica-page .cards-grid,
+.caudex-page .kpi-grid,
+.mudas-page .kpi-grid,
+.enxertia-page .kpi-grid,
+.podas-page .kpi-grid,
+.polinizacao-page .kpi-grid,
+.crescimento-page .kpi-grid,
+.logistica-page .kpi-grid {
+  justify-items: center;
+}
+
+.caudex-page .card,
+.mudas-page .card,
+.enxertia-page .card,
+.podas-page .card,
+.polinizacao-page .card,
+.crescimento-page .card,
+.logistica-page .card,
+.caudex-page .card p,
+.mudas-page .card p,
+.enxertia-page .card p,
+.podas-page .card p,
+.polinizacao-page .card p,
+.crescimento-page .card p,
+.logistica-page .card p,
+.caudex-page .card ul,
+.mudas-page .card ul,
+.enxertia-page .card ul,
+.podas-page .card ul,
+.polinizacao-page .card ul,
+.crescimento-page .card ul,
+.logistica-page .card ul {
+  text-align: center;
+}
+
+.caudex-page .plantio-photo-card,
+.mudas-page .plantio-photo-card,
+.enxertia-page .plantio-photo-card,
+.podas-page .plantio-photo-card,
+.polinizacao-page .plantio-photo-card,
+.crescimento-page .plantio-photo-card,
+.logistica-page .plantio-photo-card {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.caudex-page .plantio-photo-card img,
+.mudas-page .plantio-photo-card img,
+.enxertia-page .plantio-photo-card img,
+.podas-page .plantio-photo-card img,
+.polinizacao-page .plantio-photo-card img,
+.crescimento-page .plantio-photo-card img,
+.logistica-page .plantio-photo-card img {
+  height: 180px;
+}
+
+.dashboard-cards {
+  margin-top: 1rem;
+}

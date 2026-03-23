@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="style/styles-base.css" />
   <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/plantio.css" />
   <link rel="stylesheet" href="style/crescimento.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="script.js"></script>
@@ -30,178 +31,157 @@
     </div>
   </header>
 
-  <main class="container crescimento-page">
-    <section class="hero-crescimento">
-      <small>Maturidade da Planta | Adenium obesum</small>
-      <h1>Rosa do Deserto na Fase Adulta</h1>
-      <p>Nesta fase, o foco sai do estirão e passa para robustez, floração recorrente, manutenção técnica e valorização estética do caudex.</p>
-    </section>
-
-    <section class="section" aria-label="Definição da fase adulta">
-      <h2>1. O que é a fase adulta</h2>
-      <div class="cards-grid">
-        <article class="card"><h3>Caudex consolidado</h3><p>Base larga, madura e eficiente no armazenamento de água e nutrientes.</p></article>
-        <article class="card"><h3>Raízes estruturadas</h3><p>Sistema radicular grosso e ramificado para estabilidade e vigor.</p></article>
-        <article class="card"><h3>Capacidade reprodutiva</h3><p>Floração mais frequente e potencial real de produção de sementes.</p></article>
+  <main class="crescimento-page">
+    <section class="plantio-video-rapido" id="video-rapido">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Vídeo Rápido: Crescimento na Fase Adulta</h2>
+          <p>Robustez, floração recorrente e manutenção técnica dentro do mesmo padrão visual do plantio.</p>
+        </div>
+        <div class="video-rapido-layout">
+          <div class="video-rapido-player">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Vídeo explicativo das etapas da fase adulta"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <aside class="video-rapido-info">
+            <h3>O que você vai revisar</h3>
+            <ul>
+              <li>Definição da fase adulta e características principais.</li>
+              <li>Pilares de manutenção, nutrição e técnicas avançadas.</li>
+              <li>Diagnóstico de problemas, KPIs e dashboard de desempenho.</li>
+              <li>Simulador de manutenção para decisões rápidas.</li>
+            </ul>
+            <a href="#guia-crescimento" class="btn btn-primary">Ver Guia Técnico</a>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-label="Características principais">
-      <h2>2. Características principais</h2>
-      <div class="cards-grid">
-        <article class="card"><h3>Crescimento mais lento</h3><p>Expansão de galhos ocorre em ritmo cadenciado e controlado.</p></article>
-        <article class="card"><h3>Alta resiliência</h3><p>Maior tolerância a variações climáticas e seca curta.</p></article>
-        <article class="card"><h3>Floração intensa</h3><p>Cores mais vivas, maior volume e ciclos mais frequentes.</p></article>
-        <article class="card"><h3>Estética escultural</h3><p>Caudex mais rugoso, definido e visualmente imponente.</p></article>
+    <section class="guia-basico" id="guia-crescimento">
+      <div class="container">
+        <div class="section-heading hero-crescimento">
+          <small>Maturidade da Planta | Adenium obesum</small>
+          <h1>Rosa do Deserto na Fase Adulta</h1>
+          <p>Nesta fase, o foco sai do estirão e passa para robustez, floração recorrente, manutenção técnica e valorização estética do caudex.</p>
+        </div>
+
+        <section class="section" aria-label="Definicao da fase adulta">
+          <div class="section-heading">
+            <h2>O que é a fase adulta</h2>
+            <p>Critérios estruturais e fisiológicos que caracterizam a maturidade.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="card"><h3>Caudex consolidado</h3><p>Base larga, madura e eficiente no armazenamento de água e nutrientes.</p></article>
+            <article class="card"><h3>Raízes estruturadas</h3><p>Sistema radicular grosso e ramificado para estabilidade e vigor.</p></article>
+            <article class="card"><h3>Capacidade reprodutiva</h3><p>Floração mais frequente e potencial real de produção de sementes.</p></article>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Caracteristicas principais">
+          <div class="section-heading">
+            <h2>Características principais</h2>
+            <p>Comportamentos que definem a planta adulta no manejo diário.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="card"><h3>Crescimento mais lento</h3><p>Expansão de galhos ocorre em ritmo cadenciado e controlado.</p></article>
+            <article class="card"><h3>Alta resiliência</h3><p>Maior tolerância a variações climáticas e seca curta.</p></article>
+            <article class="card"><h3>Floração intensa</h3><p>Cores mais vivas, maior volume e ciclos mais frequentes.</p></article>
+            <article class="card"><h3>Estética escultural</h3><p>Caudex mais rugoso, definido e visualmente imponente.</p></article>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Pilares de manutencao">
+          <div class="section-heading">
+            <h2>Pilares de Manutenção e Cultivo</h2>
+            <p>Luz, substrato e nutrição determinam estabilidade nesta fase.</p>
+          </div>
+          <div class="grid-2">
+            <article class="card"><h3>Luz e temperatura</h3><ul><li>Sol pleno por 4 a 6 horas diárias.</li><li>Calor constante favorece desempenho máximo.</li><li>Abaixo de 10°C pode ocorrer dormência e queda foliar.</li></ul></article>
+            <article class="card"><h3>Rega e substrato</h3><ul><li>Rega moderada com secagem total entre ciclos.</li><li>Substrato extremamente drenante: areia grossa, carvão, casca de pinus.</li><li>Troca de solo/replantio a cada 1-2 anos para evitar compactação.</li></ul></article>
+          </div>
+          <div class="card destaque-nutricao">
+            <h3>Adubação de performance</h3>
+            <p>Priorize formulações ricas em Fósforo e Potássio (ex: NPK 04-14-08), com micronutrientes como Cálcio e Boro para sustentar floração e formação estrutural.</p>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Tecnicas avancadas">
+          <div class="section-heading">
+            <h2>Técnicas de Estética e Reprodução</h2>
+            <p>Intervenções que ampliam controle e valor ornamental.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="card"><h3>Levantamento de caudex</h3><p>Elevação gradual no replantio para exposição de raízes e acabamento artístico.</p></article>
+            <article class="card"><h3>Poda de condução</h3><p>Cria copa densa e equilibrada; poda drástica renova plantas estioladas.</p></article>
+            <article class="card"><h3>Polinização manual</h3><p>Viabiliza cruzamentos de cores e produção de vagens com maior controle.</p></article>
+            <article class="card"><h3>Enxertia em adulta robusta</h3><p>Plantas maduras funcionam como cavalos de alto desempenho para variedades raras.</p></article>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Diagnostico">
+          <div class="section-heading">
+            <h2>Problemas Comuns e Diagnósticos</h2>
+            <p>Leitura de sintomas, causas prováveis e ações corretivas.</p>
+          </div>
+          <table class="tabela">
+            <thead><tr><th>Sintoma</th><th>Causa provável</th><th>Ação recomendada</th></tr></thead>
+            <tbody>
+              <tr><td>Caudex amolecendo</td><td>Excesso de umidade e apodrecimento</td><td>Reduzir rega, revisar drenagem e remover áreas comprometidas</td></tr>
+              <tr><td>Galhos finos e longos</td><td>Falta de luz (estiolamento)</td><td>Aumentar sol direto progressivamente</td></tr>
+              <tr><td>Queda de botões</td><td>Deficiência de Boro/Cálcio ou estresse térmico/hídrico</td><td>Corrigir adubação e estabilizar manejo</td></tr>
+              <tr><td>Perda de vigor sem causa aparente</td><td>Cochonilha de raiz/ácaros</td><td>Inspeção periódica de substrato e brotações novas</td></tr>
+            </tbody>
+          </table>
+        </section>
       </div>
     </section>
 
-    <section class="section" aria-label="Pilares de manutenção">
-      <h2>3. Pilares de Manutenção e Cultivo</h2>
-      <div class="grid-2">
-        <article class="card">
-          <h3>Luz e temperatura</h3>
-          <ul>
-            <li>Sol pleno por 4 a 6 horas diárias.</li>
-            <li>Calor constante favorece desempenho máximo.</li>
-            <li>Abaixo de 10°C pode ocorrer dormência e queda foliar.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Rega e substrato</h3>
-          <ul>
-            <li>Rega moderada com secagem total entre ciclos.</li>
-            <li>Substrato extremamente drenante: areia grossa, carvão, casca de pinus.</li>
-            <li>Troca de solo/replantio a cada 1-2 anos para evitar compactação.</li>
-          </ul>
-        </article>
-      </div>
-      <div class="card destaque-nutricao">
-        <h3>Adubação de performance</h3>
-        <p>Priorize formulações ricas em Fósforo e Potássio (ex: NPK 04-14-08), com micronutrientes como Cálcio e Boro para sustentar floração e formação estrutural.</p>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Técnicas avançadas">
-      <h2>4. Técnicas de Estética e Reprodução</h2>
-      <div class="cards-grid">
-        <article class="card"><h3>Levantamento de caudex</h3><p>Elevação gradual no replantio para exposição de raízes e acabamento artístico.</p></article>
-        <article class="card"><h3>Poda de condução</h3><p>Cria copa densa e equilibrada; poda drástica renova plantas estioladas.</p></article>
-        <article class="card"><h3>Polinização manual</h3><p>Viabiliza cruzamentos de cores e produção de vagens com maior controle.</p></article>
-        <article class="card"><h3>Enxertia em adulta robusta</h3><p>Plantas maduras funcionam como cavalos de alto desempenho para variedades raras.</p></article>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Diagnóstico">
-      <h2>5. Problemas Comuns e Diagnósticos</h2>
-      <table class="tabela">
-        <thead>
-          <tr>
-            <th>Sintoma</th>
-            <th>Causa provável</th>
-            <th>Ação recomendada</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Caudex amolecendo</td>
-            <td>Excesso de umidade e apodrecimento</td>
-            <td>Reduzir rega, revisar drenagem e remover áreas comprometidas</td>
-          </tr>
-          <tr>
-            <td>Galhos finos e longos</td>
-            <td>Falta de luz (estiolamento)</td>
-            <td>Aumentar sol direto progressivamente</td>
-          </tr>
-          <tr>
-            <td>Queda de botões</td>
-            <td>Deficiência de Boro/Cálcio ou estresse térmico/hídrico</td>
-            <td>Corrigir adubação e estabilizar manejo</td>
-          </tr>
-          <tr>
-            <td>Perda de vigor sem causa aparente</td>
-            <td>Cochonilha de raiz/ácaros</td>
-            <td>Inspeção periódica de substrato e brotações novas</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="section" aria-label="KPIs">
-      <h2>KPIs da fase adulta</h2>
-      <div class="kpi-grid">
-        <article class="kpi"><h3>Sol diário ideal</h3><p>4-6h</p></article>
-        <article class="kpi"><h3>Troca de substrato</h3><p>1-2 anos</p></article>
-        <article class="kpi"><h3>Faixa de risco térmico</h3><p>&lt; 10°C</p></article>
-        <article class="kpi"><h3>Floração anual</h3><p>2-4 ciclos</p></article>
-        <article class="kpi"><h3>Intervalo de poda</h3><p>6-12 meses</p></article>
-        <article class="kpi"><h3>Meta de perdas</h3><p>&lt; 5%</p></article>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Dashboard">
-      <h2>Dashboard de Crescimento Adulta</h2>
-      <div class="graficos crescimento-graficos">
-        <div class="grafico"><h4>Desempenho por Pilar</h4><canvas id="crescimentoPilarChart"></canvas></div>
-        <div class="grafico"><h4>Evolução de Floração no Ano</h4><canvas id="crescimentoFloracaoChart"></canvas></div>
-        <div class="grafico"><h4>Risco Operacional</h4><canvas id="crescimentoRiscoChart"></canvas></div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Galeria técnica">
-      <h2>Formatos de Imagem para Visualização</h2>
-      <div class="crescimento-gallery">
-        <figure>
-          <img src="imagnes/plantio/plantio.jpg" alt="Rosa do Deserto adulta" />
-          <figcaption>Plano aberto para avaliação de estrutura geral.</figcaption>
-        </figure>
-        <figure>
-          <img src="imagnes/plantio/plantiio__.jpg" alt="Caudex maduro" />
-          <figcaption>Close do caudex para leitura de maturidade e saúde.</figcaption>
-        </figure>
-        <figure>
-          <img src="imagnes/plantio/plantio_.png" alt="Floração intensa" />
-          <figcaption>Registro de floração e potencial ornamental.</figcaption>
-        </figure>
+    <section class="plantio-media-showcase" id="resumo-visual-crescimento">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Resumo Visual do Processo</h2>
+          <p>Este resumo mostra estrutura adulta, leitura do caudex e floração para orientar manutenção contínua com menor risco operacional.</p>
+        </div>
+        <div class="plantio-photo-grid crescimento-gallery">
+          <figure class="plantio-photo-card"><img src="imagnes/plantio/plantio.jpg" alt="Estrutura da planta adulta" /><figcaption>Estrutura geral da fase adulta.</figcaption></figure>
+          <figure class="plantio-photo-card"><img src="imagnes/plantio/plantiio__.jpg" alt="Caudex maduro em fase adulta" /><figcaption>Leitura de maturidade e vigor do caudex.</figcaption></figure>
+          <figure class="plantio-photo-card"><img src="imagnes/plantio/plantio_.png" alt="Floracao em planta adulta" /><figcaption>Floração recorrente com manejo estável.</figcaption></figure>
+        </div>
       </div>
     </section>
 
     <section class="section" aria-label="Simulador">
-      <h2>Simulador de Manutenção Adulta</h2>
-      <div class="card crescimento-simulador">
-        <p>Informe as condições atuais para receber um diagnóstico operacional rápido.</p>
-        <div class="simulador-grid">
-          <label for="solCrescimento">Sol diário</label>
-          <select id="solCrescimento">
-            <option value="ideal">4-6h</option>
-            <option value="baixo">Menos de 4h</option>
-            <option value="alto">Mais de 6h</option>
-          </select>
-
-          <label for="regaCrescimento">Estado da rega</label>
-          <select id="regaCrescimento">
-            <option value="equilibrada">Substrato seca entre regas</option>
-            <option value="excesso">Regas frequentes / solo úmido</option>
-            <option value="deficit">Seca prolongada</option>
-          </select>
-
-          <label for="temperaturaCrescimento">Temperatura média</label>
-          <select id="temperaturaCrescimento">
-            <option value="ideal">25-35°C</option>
-            <option value="frio">Abaixo de 10°C</option>
-            <option value="intermediaria">10-24°C</option>
-          </select>
+      <div class="container">
+        <div class="section-heading">
+          <h2>Simulador de Manutenção Adulta</h2>
+          <p>Informe as condições atuais para receber um diagnóstico operacional rápido.</p>
         </div>
-        <button id="calcularCrescimento" class="btn btn-primary">Gerar diagnóstico</button>
-        <div id="resultadoCrescimento" class="simulador-resultado">
-          <p><strong>Status:</strong> Estável e produtiva</p>
-          <p><strong>Risco:</strong> Baixo</p>
-          <p><strong>Ação prioritária:</strong> Manter adubação rica em P e K + inspeção quinzenal.</p>
+        <div class="card crescimento-simulador">
+          <div class="simulador-grid">
+            <label for="solCrescimento">Sol diário</label>
+            <select id="solCrescimento"><option value="ideal">4-6h</option><option value="baixo">Menos de 4h</option><option value="alto">Mais de 6h</option></select>
+            <label for="regaCrescimento">Estado da rega</label>
+            <select id="regaCrescimento"><option value="equilibrada">Substrato seca entre regas</option><option value="excesso">Regas frequentes / solo úmido</option><option value="deficit">Seca prolongada</option></select>
+            <label for="temperaturaCrescimento">Temperatura média</label>
+            <select id="temperaturaCrescimento"><option value="ideal">25-35°C</option><option value="frio">Abaixo de 10°C</option><option value="intermediaria">10-24°C</option></select>
+          </div>
+          <button id="calcularCrescimento" class="btn btn-primary">Gerar diagnóstico</button>
+          <div id="resultadoCrescimento" class="simulador-resultado">
+            <p><strong>Status:</strong> Estável e produtiva</p>
+            <p><strong>Risco:</strong> Baixo</p>
+            <p><strong>Ação prioritária:</strong> Manter adubação rica em P e K + inspeção quinzenal.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="conclusao">
+    <section class="conclusao container">
       <h2>Resumo de gestão</h2>
       <p>Na fase adulta, o sucesso vem da constância: luz correta, rega técnica, substrato drenante e nutrição de floração. Com manejo estável, a planta entrega valor estético e produtividade elevada por muitos anos.</p>
     </section>

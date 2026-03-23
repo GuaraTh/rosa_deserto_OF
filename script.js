@@ -221,6 +221,389 @@ document.addEventListener('DOMContentLoaded', function () {
     kpiValues.forEach((k) => counterObserver.observe(k));
   }
 
+  function parseKpiNumber(rawText) {
+    if (!rawText) return null;
+
+    const text = rawText.replace(/\s+/g, ' ').trim();
+    const matches = text.match(/\d+(?:[.,]\d+)?/g);
+    if (!matches || matches.length === 0) return null;
+
+    const numbers = matches
+      .map((value) => Number(value.replace(',', '.')))
+      .filter((value) => !Number.isNaN(value));
+
+    if (numbers.length === 0) return null;
+
+    const average = numbers.reduce((sum, value) => sum + value, 0) / numbers.length;
+    let type = 'quantidade';
+
+    if (/r\$/i.test(text)) {
+      type = 'moeda';
+    } else if (/%/.test(text)) {
+      type = 'percentual';
+    } else if (/(dia|dias|semana|semanas|m[eE]s|meses|h|hora|horas|\u00b0c|c\b)/i.test(text)) {
+      type = 'tempo';
+    }
+
+    return {
+      value: average,
+      type: type,
+      original: text
+    };
+  }
+
+  function formatKpiValue(value, type) {
+    if (type === 'moeda') {
+      return `R$ ${value.toFixed(2).replace('.', ',')}`;
+    }
+    if (type === 'percentual') {
+      return `${value.toFixed(1).replace('.', ',')}%`;
+    }
+    if (type === 'tempo') {
+      return `${value.toFixed(1).replace('.', ',')}`;
+    }
+    return `${value.toFixed(1).replace('.', ',')}`;
+  }
+
+  function initInteractiveKpiDashboards() {
+    if (typeof Chart === 'undefined') return;
+
+    const kpiGrids = Array.from(document.querySelectorAll('.kpi-grid'));
+    if (kpiGrids.length === 0) return;
+
+    kpiGrids.forEach((grid, gridIndex) => {
+      if (grid.closest('.kpi-dashboard-section')) return;
+
+      const kpiCards = Array.from(grid.querySelectorAll('.kpi'));
+      if (kpiCards.length === 0) return;
+
+      const dataset = kpiCards
+        .map((card, cardIndex) => {
+          const titleEl = card.querySelector('h3');
+          const valueEl = card.querySelector('p');
+          if (!titleEl || !valueEl) return null;
+
+          const parsed = parseKpiNumber(valueEl.textContent || '');
+          if (!parsed) return null;
+
+          return {
+            id: `${gridIndex}-${cardIndex}`,
+            title: titleEl.textContent.trim(),
+            value: parsed.value,
+            type: parsed.type,
+            original: parsed.original
+          };
+        })
+        .filter(Boolean);
+
+      if (dataset.length === 0) return;
+
+      const section = document.createElement('section');
+      section.className = 'kpi-dashboard-section';
+
+      const dashboardId = `kpiDashboardChart-${gridIndex}`;
+      section.innerHTML = `
+        <div class="container">
+          <h2>Painel Interativo de KPIs</h2>
+          <p>Filtre indicadores, ajuste cenarios e compare o impacto nos dados operacionais.</p>
+          <div class="kpi-dashboard-guide">
+            <article><h4>Tipo de dado</h4><p>Filtra os KPIs por categoria para leitura focada.</p></article>
+            <article><h4>Ordenar</h4><p>Reorganiza os indicadores para destacar prioridades.</p></article>
+            <article><h4>Ajuste de cenário</h4><p>Simula desempenho de -30% a +30% no processo.</p></article>
+          </div>
+          <div class="kpi-dashboard-controls">
+            <label>
+              Tipo de dado
+              <select class="kpi-filter-type">
+                <option value="todos">Todos</option>
+                <option value="percentual">Percentual</option>
+                <option value="tempo">Tempo</option>
+                <option value="moeda">Moeda</option>
+                <option value="quantidade">Quantidade</option>
+              </select>
+            </label>
+            <label>
+              Ordenar
+              <select class="kpi-filter-order">
+                <option value="valor-desc">Maior valor</option>
+                <option value="valor-asc">Menor valor</option>
+                <option value="nome-asc">Nome (A-Z)</option>
+              </select>
+            </label>
+            <label>
+              Ajuste de cenario <span class="kpi-factor-value">100%</span>
+              <input type="range" min="70" max="130" value="100" class="kpi-factor-range" />
+            </label>
+          </div>
+          <div class="kpi-dashboard-summary">
+            <article><h4>KPIs ativos</h4><p class="kpi-active-count">0</p></article>
+            <article><h4>Media base</h4><p class="kpi-base-avg">0</p></article>
+            <article><h4>Media ajustada</h4><p class="kpi-adjusted-avg">0</p></article>
+          </div>
+          <div class="grafico kpi-dashboard-chart-wrap">
+            <canvas id="${dashboardId}"></canvas>
+          </div>
+        </div>
+      `;
+
+      const targetSection = grid.closest('section');
+      if (targetSection && targetSection.parentNode) {
+        targetSection.parentNode.insertBefore(section, targetSection.nextSibling);
+      } else {
+        document.querySelector('main')?.appendChild(section);
+      }
+
+      const typeSelect = section.querySelector('.kpi-filter-type');
+      const orderSelect = section.querySelector('.kpi-filter-order');
+      const factorRange = section.querySelector('.kpi-factor-range');
+      const factorValue = section.querySelector('.kpi-factor-value');
+      const activeCount = section.querySelector('.kpi-active-count');
+      const baseAvg = section.querySelector('.kpi-base-avg');
+      const adjustedAvg = section.querySelector('.kpi-adjusted-avg');
+      const canvas = section.querySelector(`#${dashboardId}`);
+
+      if (!typeSelect || !orderSelect || !factorRange || !factorValue || !activeCount || !baseAvg || !adjustedAvg || !canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let dashboardChart = null;
+
+      function updateDashboard() {
+        const selectedType = typeSelect.value;
+        const selectedOrder = orderSelect.value;
+        const factor = Number(factorRange.value) / 100;
+        factorValue.textContent = `${factorRange.value}%`;
+
+        let filtered = dataset.filter((item) => selectedType === 'todos' || item.type === selectedType);
+
+        if (selectedOrder === 'valor-desc') {
+          filtered = filtered.sort((a, b) => b.value - a.value);
+        } else if (selectedOrder === 'valor-asc') {
+          filtered = filtered.sort((a, b) => a.value - b.value);
+        } else {
+          filtered = filtered.sort((a, b) => a.title.localeCompare(b.title));
+        }
+
+        const labels = filtered.map((item) => item.title);
+        const baseValues = filtered.map((item) => item.value);
+        const adjustedValues = filtered.map((item) => Number((item.value * factor).toFixed(2)));
+
+        const baseAverage = baseValues.length > 0
+          ? baseValues.reduce((sum, value) => sum + value, 0) / baseValues.length
+          : 0;
+        const adjustedAverageValue = adjustedValues.length > 0
+          ? adjustedValues.reduce((sum, value) => sum + value, 0) / adjustedValues.length
+          : 0;
+
+        activeCount.textContent = String(filtered.length);
+        baseAvg.textContent = formatKpiValue(baseAverage, selectedType === 'todos' ? 'quantidade' : selectedType);
+        adjustedAvg.textContent = formatKpiValue(adjustedAverageValue, selectedType === 'todos' ? 'quantidade' : selectedType);
+
+        if (dashboardChart) {
+          dashboardChart.destroy();
+        }
+
+        dashboardChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: 'Base',
+                data: baseValues,
+                backgroundColor: 'rgba(195, 122, 53, 0.75)'
+              },
+              {
+                label: 'Ajustado',
+                data: adjustedValues,
+                backgroundColor: 'rgba(46, 125, 50, 0.65)'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            },
+            plugins: {
+              title: {
+                display: true,
+                text: 'Comparativo interativo dos KPIs'
+              },
+              legend: {
+                position: 'bottom'
+              }
+            }
+          }
+        });
+      }
+
+      typeSelect.addEventListener('change', updateDashboard);
+      orderSelect.addEventListener('change', updateDashboard);
+      factorRange.addEventListener('input', updateDashboard);
+
+      updateDashboard();
+    });
+  }
+
+  function initTopicCarousels() {
+    const selectors = [
+      '.cards-grid',
+      '.kpi-grid',
+      '.learning-path',
+      '.plantio-overview-flow',
+      '.plantio-photo-grid',
+      '.gallery-options',
+      '.timeline',
+      '.galeria'
+    ];
+
+    selectors.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((track) => {
+        if (track.dataset.carouselReady === 'true') return;
+
+        const items = Array.from(track.children).filter((child) => child.nodeType === 1);
+        if (items.length < 2) return;
+
+        track.dataset.carouselReady = 'true';
+        track.classList.add('topic-carousel-track');
+
+        items.forEach((item) => {
+          if (!item.classList.contains('path-arrow')) {
+            item.classList.add('topic-carousel-item');
+          }
+        });
+
+        const viewport = document.createElement('div');
+        viewport.className = 'topic-carousel-viewport';
+        track.parentNode.insertBefore(viewport, track);
+        viewport.appendChild(track);
+
+        const controls = document.createElement('div');
+        controls.className = 'topic-carousel-controls';
+        controls.innerHTML = `
+          <button type="button" class="topic-carousel-btn" aria-label="Item anterior">←</button>
+          <span class="topic-carousel-hint">Deslize ou use os botões</span>
+          <button type="button" class="topic-carousel-btn" aria-label="Próximo item">→</button>
+        `;
+
+        viewport.parentNode.insertBefore(controls, viewport.nextSibling);
+
+        const [prev, , next] = controls.children;
+
+        prev.addEventListener('click', () => {
+          viewport.scrollBy({ left: -Math.max(260, viewport.clientWidth * 0.8), behavior: 'smooth' });
+        });
+
+        next.addEventListener('click', () => {
+          viewport.scrollBy({ left: Math.max(260, viewport.clientWidth * 0.8), behavior: 'smooth' });
+        });
+      });
+    });
+  }
+
+  function initPagePhotoBoards() {
+    const main = document.querySelector('main');
+    if (!main || main.querySelector('.topic-photo-board')) return;
+
+    const section = document.createElement('section');
+    section.className = 'topic-photo-board';
+    section.id = 'quadro-fotos';
+    section.innerHTML = `
+      <div class="container">
+        <h2>Quadro de Fotos do Tópico</h2>
+        <p>Reserve estes quadros para adicionar fotos de referência, evolução e resultado final.</p>
+        <div class="photo-board-grid">
+          <article class="photo-frame">
+            <h4>Foto 1</h4>
+            <label class="photo-upload-label">Adicionar
+              <input type="file" accept="image/*" data-frame="frame-1" />
+            </label>
+            <div class="photo-placeholder" id="frame-1"><small>Sem foto</small></div>
+          </article>
+          <article class="photo-frame">
+            <h4>Foto 2</h4>
+            <label class="photo-upload-label">Adicionar
+              <input type="file" accept="image/*" data-frame="frame-2" />
+            </label>
+            <div class="photo-placeholder" id="frame-2"><small>Sem foto</small></div>
+          </article>
+          <article class="photo-frame">
+            <h4>Foto 3</h4>
+            <label class="photo-upload-label">Adicionar
+              <input type="file" accept="image/*" data-frame="frame-3" />
+            </label>
+            <div class="photo-placeholder" id="frame-3"><small>Sem foto</small></div>
+          </article>
+          <article class="photo-frame">
+            <h4>Foto 4</h4>
+            <label class="photo-upload-label">Adicionar
+              <input type="file" accept="image/*" data-frame="frame-4" />
+            </label>
+            <div class="photo-placeholder" id="frame-4"><small>Sem foto</small></div>
+          </article>
+        </div>
+      </div>
+    `;
+
+    main.appendChild(section);
+
+    section.querySelectorAll('input[type="file"]').forEach((input) => {
+      input.addEventListener('change', (event) => {
+        const file = event.target.files && event.target.files[0];
+        if (!file) return;
+
+        const frameId = input.dataset.frame;
+        const frame = section.querySelector(`#${frameId}`);
+        if (!frame) return;
+
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        img.alt = 'Foto adicionada no quadro';
+        frame.innerHTML = '';
+        frame.appendChild(img);
+      });
+    });
+  }
+
+  function initQuickActionButtons() {
+    if (document.querySelector('.quick-actions')) return;
+
+    const box = document.createElement('aside');
+    box.className = 'quick-actions';
+    box.innerHTML = `
+      <a class="quick-action-link" href="#quadro-fotos">Quadro de fotos</a>
+      <a class="quick-action-link" href="mailto:contato@rosadodeserto.com?subject=Contato%20Site%20Rosa%20do%20Deserto">Contato</a>
+      <button type="button" class="quick-action-link quick-action-button" id="voltarTopo">Topo</button>
+    `;
+
+    document.body.appendChild(box);
+
+    const topButton = document.getElementById('voltarTopo');
+    if (topButton) {
+      topButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  }
+
+  function initFunctionalButtons() {
+    document.querySelectorAll('.carousel-card .btn-primary').forEach((button) => {
+      if (button.tagName.toLowerCase() !== 'button') return;
+
+      button.addEventListener('click', () => {
+        const card = button.closest('.carousel-card');
+        const title = card?.querySelector('h3')?.textContent?.trim() || 'Rosa do Deserto';
+        const mail = `mailto:contato@rosadodeserto.com?subject=Interesse%20em%20${encodeURIComponent(title)}&body=Ol%C3%A1,%20tenho%20interesse%20neste%20item:%20${encodeURIComponent(title)}`;
+        window.location.href = mail;
+      });
+    });
+  }
+
   function highlightActiveNav() {
     const current = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav a').forEach((a) => {
@@ -231,10 +614,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  initPageTopBanner();
-  initPhotoUploadSlots();
-  initProcessPhotoGrid();
+  // Keep only page-authored content flow; avoid injecting extra sections.
   initKpiCounters();
+  initInteractiveKpiDashboards();
+  initTopicCarousels();
+  initFunctionalButtons();
   highlightActiveNav();
 
   const mobileNavToggle = document.getElementById('mobileNavToggle');
@@ -366,19 +750,48 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const metodoSimulador = document.getElementById('metodoSimulador');
+  const perfilSimulador = document.getElementById('perfilSimulador');
+  const calcularSimulador = document.getElementById('calcularSimulador');
   const resultadoSimulador = document.getElementById('resultadoSimulador');
 
-  if (metodoSimulador) {
-    const tempos = {
-      Semente: '12–24 meses',
-      Estaca: '6–12 meses',
-      Enxerto: '3–6 meses',
-      Alporquia: '6–12 meses'
+  if (metodoSimulador && resultadoSimulador) {
+    const cenarios = {
+      Semente: { base: [12, 24], risco: 'Médio' },
+      Estaca: { base: [6, 12], risco: 'Baixo' },
+      Enxerto: { base: [3, 6], risco: 'Médio' },
+      Alporquia: { base: [6, 12], risco: 'Médio' }
     };
 
-    metodoSimulador.addEventListener('change', () => {
-      resultadoSimulador.textContent = `Tempo estimado: ${tempos[metodoSimulador.value]}`;
-    });
+    const fatorPerfil = {
+      conservador: 1.15,
+      equilibrado: 1,
+      agressivo: 0.85
+    };
+
+    function renderSimulador() {
+      const metodo = metodoSimulador.value;
+      const perfil = perfilSimulador ? perfilSimulador.value : 'equilibrado';
+      const dados = cenarios[metodo] || cenarios.Semente;
+      const fator = fatorPerfil[perfil] || 1;
+
+      const min = Math.round(dados.base[0] * fator);
+      const max = Math.round(dados.base[1] * fator);
+
+      resultadoSimulador.innerHTML = `
+        <p><strong>Método:</strong> ${metodo}</p>
+        <p><strong>Perfil:</strong> ${perfil.charAt(0).toUpperCase() + perfil.slice(1)}</p>
+        <p><strong>Tempo estimado:</strong> ${min}–${max} meses</p>
+        <p><strong>Nível de risco:</strong> ${dados.risco}</p>
+      `;
+    }
+
+    metodoSimulador.addEventListener('change', renderSimulador);
+    if (perfilSimulador) perfilSimulador.addEventListener('change', renderSimulador);
+    if (calcularSimulador) {
+      calcularSimulador.addEventListener('click', renderSimulador);
+    }
+
+    renderSimulador();
   }
 
   // Scroll animations
@@ -524,6 +937,114 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       }
+    });
+  }
+
+  const enxertiaMetodoChart = document.getElementById('enxertiaMetodoChart');
+  if (enxertiaMetodoChart) {
+    new Chart(enxertiaMetodoChart, {
+      type: 'bar',
+      data: {
+        labels: ['Flat Graft', 'Garfagem', 'Borbulhia'],
+        datasets: [{
+          label: 'Tempo para venda (meses)',
+          data: [4.5, 5.2, 6.0],
+          backgroundColor: ['#2e7d32', '#ef6c00', '#6a1b9a']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Tempo medio por metodo de enxertia'
+          }
+        }
+      }
+    });
+  }
+
+  const enxertiaRiscoChart = document.getElementById('enxertiaRiscoChart');
+  if (enxertiaRiscoChart) {
+    new Chart(enxertiaRiscoChart, {
+      type: 'radar',
+      data: {
+        labels: ['Contaminacao', 'Rejeicao', 'Oxidacao', 'Perda de vigor', 'Falha de soldagem'],
+        datasets: [{
+          label: 'Sem SOP',
+          data: [78, 64, 58, 46, 62],
+          borderColor: '#c62828',
+          backgroundColor: 'rgba(198, 40, 40, 0.20)'
+        }, {
+          label: 'Com SOP',
+          data: [20, 26, 18, 22, 24],
+          borderColor: '#2e7d32',
+          backgroundColor: 'rgba(46, 125, 50, 0.20)'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          r: {
+            min: 0,
+            max: 100
+          }
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Risco operacional (com e sem protocolo)'
+          }
+        }
+      }
+    });
+  }
+
+  const raridadeEnxerto = document.getElementById('raridadeEnxerto');
+  const metodoEnxertia = document.getElementById('metodoEnxertia');
+  const sopAtivo = document.getElementById('sopAtivo');
+  const calcularEnxertia = document.getElementById('calcularEnxertia');
+  const resultadoEnxertia = document.getElementById('resultadoEnxertia');
+
+  if (raridadeEnxerto && metodoEnxertia && sopAtivo && calcularEnxertia && resultadoEnxertia) {
+    const metodoFactor = {
+      flat: 1,
+      garfagem: 1.15,
+      borbulhia: 1.3
+    };
+
+    const metodoTempo = {
+      flat: '4 a 5 meses',
+      garfagem: '5 a 6 meses',
+      borbulhia: '6 a 7 meses'
+    };
+
+    function brl(value) {
+      return `R$ ${value.toFixed(2).replace('.', ',')}`;
+    }
+
+    calcularEnxertia.addEventListener('click', function () {
+      const rarity = Number(raridadeEnxerto.value);
+      const metodo = metodoEnxertia.value;
+      const sop = sopAtivo.checked;
+
+      const basePrice = 120;
+      const price = basePrice * rarity * (metodoFactor[metodo] || 1) * (sop ? 1 : 0.86);
+
+      let riscoScore = 32;
+      if (metodo === 'garfagem') riscoScore += 8;
+      if (metodo === 'borbulhia') riscoScore += 13;
+      if (!sop) riscoScore += 35;
+
+      let riscoLabel = 'Baixo';
+      if (riscoScore >= 45) riscoLabel = 'Medio';
+      if (riscoScore >= 65) riscoLabel = 'Alto';
+
+      resultadoEnxertia.innerHTML = `
+        <p><strong>Valor projetado:</strong> ${brl(price)}</p>
+        <p><strong>Risco operacional:</strong> ${riscoLabel} (${riscoScore}/100)</p>
+        <p><strong>Tempo estimado de venda:</strong> ${metodoTempo[metodo] || '4 a 6 meses'}</p>
+      `;
     });
   }
 

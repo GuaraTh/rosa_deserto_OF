@@ -110,55 +110,125 @@
   font-weight: 600;
 }
 
-.mudas-page .cores {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  justify-content: center;
-}
-
-.mudas-page .cor {
-  padding: 0.38rem 0.78rem;
-  border-radius: 999px;
-  font-weight: 700;
-  color: #fff;
-}
-
-.mudas-page .rosa { background: #de3f83; }
-.mudas-page .vermelha { background: #cc3232; }
-.mudas-page .branca { background: #e6e2dd; color: #403424; }
-.mudas-page .roxa { background: #6d3597; }
-.mudas-page .amarela { background: #e8be33; color: #3b2e16; }
-.mudas-page .mesclada { background: linear-gradient(45deg, #de3f83, #e8be33, #6d3597); }
-
-.mudas-page .mudas-gallery {
+.mudas-page .cores-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.mudas-page .cor-card {
+  width: 100%;
+  border: 1px solid #e2d7c7;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.mudas-page .cor-card-foto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.mudas-page .cor-card-label {
+  padding: 0.55rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.mudas-page .rosa-label    { background: #de3f83; }
+.mudas-page .vermelha-label { background: #cc3232; }
+.mudas-page .branca-label  { background: #e6e2dd; color: #403424; }
+.mudas-page .roxa-label    { background: #6d3597; }
+.mudas-page .amarela-label { background: #e8be33; color: #3b2e16; }
+.mudas-page .mesclada-label { background: linear-gradient(90deg, #de3f83, #e8be33, #6d3597); }
+
+.mudas-page .mudas-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  justify-items: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mudas-page .mudas-gallery figure {
   margin: 0;
+  width: 100%;
   border: 1px solid #e2d7c7;
   background: #fff;
   border-radius: 0.9rem;
   overflow: hidden;
+  text-align: center;
 }
 
 .mudas-page .mudas-gallery img {
   width: 100%;
-  height: 150px;
+  height: 220px;
   object-fit: cover;
+  display: block;
 }
 
 .mudas-page .mudas-gallery figcaption {
-  padding: 0.7rem;
+  padding: 0.75rem;
   font-size: 0.9rem;
   color: #5f4f3a;
+  text-align: center;
 }
 
 .mudas-page .mudas-graficos {
   margin-top: 0.8rem;
+}
+
+.mudas-page .painel-mudas {
+  margin-top: 1.6rem;
+}
+
+.mudas-page .painel-tabs {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.8rem auto 1rem;
+  max-width: 760px;
+}
+
+.mudas-page .painel-tab {
+  border: 1px solid #d8c6ad;
+  background: #fff7ec;
+  color: #5f4f3a;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mudas-page .painel-tab.active {
+  background: #c37a35;
+  border-color: #c37a35;
+  color: #fff;
+}
+
+.mudas-page .painel-conteudo {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.mudas-page .painel-bloco {
+  display: none;
+}
+
+.mudas-page .painel-bloco.active {
+  display: block;
 }
 
 .mudas-page .conclusao {
@@ -170,6 +240,61 @@
   background: linear-gradient(135deg, #fff3e0, #fdf8f0);
 }
 
+/* Variação de Cores — layout grande com descrição ao lado */
+.mudas-page .mudas-variacao-grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mudas-page .mudas-var-bloco {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  border: 1px solid #e2d7c7;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.mudas-page .mudas-var-foto {
+  margin: 0;
+}
+
+.mudas-page .mudas-var-foto img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.mudas-page .mudas-var-descricao {
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.mudas-page .mudas-var-descricao .cor-card-label {
+  display: inline-block;
+  padding: 0.28rem 0.72rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.mudas-page .mudas-var-descricao p {
+  font-size: 0.88rem;
+  color: #5f4f3a;
+  line-height: 1.55;
+  margin: 0;
+}
+
 @media (max-width: 700px) {
   .mudas-page .tabela {
     font-size: 0.87rem;
@@ -177,5 +302,21 @@
 
   .mudas-page .hero-mudas {
     padding-top: 2.5rem;
+  }
+
+  .mudas-page .painel-tab {
+    width: 100%;
+  }
+
+  .mudas-page .mudas-variacao-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .mudas-page .mudas-var-bloco {
+    grid-template-columns: 1fr;
+  }
+
+  .mudas-page .mudas-var-foto img {
+    height: 200px;
   }
 }

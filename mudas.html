@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="style/styles-base.css" />
   <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/plantio.css" />
   <link rel="stylesheet" href="style/mudas.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="script.js"></script>
@@ -33,163 +34,343 @@
   </header>
 
 
-<main class="container mudas-page">
-  <section class="hero-mudas">
-    <small>Catálogo Técnico | Adenium obesum</small>
-    <h1>Mudas de Rosa do Deserto: análise completa</h1>
-    <p>Comparação profissional entre semente, estaquia e enxerto com foco em qualidade estética, velocidade e valor de mercado.</p>
-  </section>
-
-  <section class="section" aria-label="Tipos principais de muda">
-    <h2>1. Tipos de Muda</h2>
-    <div class="cards-grid">
-      <article class="card">
-        <span class="badge sucesso">Sementeira</span>
-        <h3>Muda por Semente</h3>
-        <ul>
-          <li>Desenvolve caudex mais forte e estético.</li>
-          <li>Cada planta é única em forma e genética.</li>
-          <li>Mais resistente no longo prazo.</li>
-          <li>Floração mais lenta e cor imprevisível.</li>
-        </ul>
-      </article>
-      <article class="card">
-        <span class="badge alerta">Estaquia</span>
-        <h3>Muda por Galho</h3>
-        <ul>
-          <li>Clonagem fiel da planta mãe.</li>
-          <li>Crescimento mais rápido e previsível.</li>
-          <li>Menor formação de caudex.</li>
-          <li>Menor valor ornamental em geral.</li>
-        </ul>
-      </article>
-      <article class="card">
-        <span class="badge premium">Premium</span>
-        <h3>Muda Enxertada</h3>
-        <ul>
-          <li>Cor da flor garantida e floração antecipada.</li>
-          <li>Alta aplicação comercial e múltiplos enxertos.</li>
-          <li>Grande variedade de cores e combinações.</li>
-          <li>Pode ter menor durabilidade que muda de semente.</li>
-        </ul>
-      </article>
+<main class="mudas-page">
+  <section class="plantio-video-rapido" id="video-rapido">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Vídeo Rápido: Mudas e Espécies</h2>
+        <p>Comparação profissional entre semente, estaquia e enxerto no mesmo formato visual do plantio.</p>
+      </div>
+      <div class="video-rapido-layout">
+        <div class="video-rapido-player">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Vídeo explicativo das etapas de análise de mudas"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <aside class="video-rapido-info">
+          <h3>O que você vai revisar</h3>
+          <ul>
+            <li>Diferenças entre muda por semente, galho e enxerto.</li>
+            <li>Comparativo técnico de crescimento, caudex e valor.</li>
+            <li>KPIs de viveiro e leitura do dashboard de desempenho.</li>
+            <li>Padrões de caudex, flores, cores e imagens de catálogo.</li>
+          </ul>
+          <a href="#guia-mudas" class="btn btn-primary">Ver Guia Técnico</a>
+        </aside>
+      </div>
     </div>
   </section>
 
-  <section class="section" aria-label="Comparativo técnico">
-    <h2>2. Comparativo Técnico</h2>
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th>Critério</th>
-          <th>Semente</th>
-          <th>Estaquia</th>
-          <th>Enxerto</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Crescimento</td>
-          <td>Lento</td>
-          <td>Rápido</td>
-          <td>Médio</td>
-        </tr>
-        <tr>
-          <td>Formação de caudex</td>
-          <td>Excelente</td>
-          <td>Baixa</td>
-          <td>Boa</td>
-        </tr>
-        <tr>
-          <td>Previsibilidade da flor</td>
-          <td>Baixa</td>
-          <td>Alta</td>
-          <td>Altíssima</td>
-        </tr>
-        <tr>
-          <td>Valor comercial</td>
-          <td>Médio/Alto</td>
-          <td>Médio</td>
-          <td>Alto</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+  <section class="plantio-media-showcase" id="galeria-mudas">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Galeria das Mudas</h2>
+        <p>Leitura rápida do lote, do caudex e da apresentação para catálogo.</p>
+      </div>
+      <div class="plantio-photo-grid mudas-gallery">
+        <figure class="plantio-photo-card featured">
+          <img src="imagnes/Fotos Mudas/mudas (1).jpeg" alt="Mudas em bancada de viveiro" />
+          <figcaption>Plano geral de lote para avaliação de padrão.</figcaption>
+        </figure>
+        <figure class="plantio-photo-card">
+          <img src="imagnes/Fotos Mudas/mudas (6).jpeg" alt="Detalhe de caudex" />
+          <figcaption>Close no caudex para classificação estética.</figcaption>
+        </figure>
+        <figure class="plantio-photo-card">
+          <img src="imagnes/Fotos Mudas/mudas (7).jpeg" alt="Muda florida em vaso" />
+          <figcaption>Imagem de catálogo para venda online.</figcaption>
+        </figure>
+        <figure class="plantio-photo-card">
+          <img src="imagnes/Fotos Mudas/mudas (8).jpeg" alt="Muda florida em vaso" />
+          <figcaption>Imagem de catálogo para venda online.</figcaption>
+        </figure>
+        <figure class="plantio-photo-card">
 
-  <section class="section" aria-label="KPIs de mudas">
-    <h2>3. KPIs do Viveiro</h2>
-    <div class="kpi-grid">
-      <article class="kpi"><h3>Taxa de pegamento</h3><p>85% - 95%</p></article>
-      <article class="kpi"><h3>Floração média</h3><p>6 - 18 meses</p></article>
-      <article class="kpi"><h3>Valor médio de venda</h3><p>R$ 35 - R$ 180</p></article>
-      <article class="kpi"><h3>Demanda por enxerto</h3><p>Alta no varejo</p></article>
+          <img src="imagnes/Fotos Mudas/mudas (10).jpeg" alt="Muda florida em vaso" />
+          <figcaption>Imagem de catálogo para venda online.</figcaption>
+        </figure>
+        <figure class="plantio-photo-card">
+          <img src="imagnes/Fotos Mudas/mudas (6).jpeg" alt="Muda florida em vaso" />
+          <figcaption>Imagem de catálogo para venda online.</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
-  <section class="section" aria-label="Dashboard de mudas">
-    <h2>4. Dashboard de Desempenho</h2>
-    <div class="graficos mudas-graficos">
-      <div class="grafico"><h4>Tempo de Produção (meses)</h4><canvas id="barChart"></canvas></div>
-      <div class="grafico"><h4>Evolução de Crescimento</h4><canvas id="lineChart"></canvas></div>
-      <div class="grafico"><h4>Perfil Técnico por Método</h4><canvas id="radarChart"></canvas></div>
+  <section class="guia-basico" id="guia-mudas">
+    <div class="container">
+      <div class="section-heading hero-mudas">
+        <small>Catálogo Técnico | Adenium obesum</small>
+        <h1>Mudas de Rosa do Deserto: análise completa</h1>
+        <p>Comparação profissional entre semente, estaquia e enxerto com foco em qualidade estética, velocidade e valor de mercado.</p>
+      </div>
+
+      <section class="section" aria-label="Tipos principais de muda">
+        <div class="section-heading">
+          <h2>Tipos de Muda</h2>
+          <p>Principais métodos de obtenção e seu impacto no produto final.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <span class="badge sucesso">Sementeira</span>
+            <h3>Muda por Semente</h3>
+            <ul>
+              <li>Desenvolve caudex mais forte e estético.</li>
+              <li>Cada planta é única em forma e genética.</li>
+              <li>Mais resistente no longo prazo.</li>
+              <li>Floração mais lenta e cor imprevisível.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="badge alerta">Estaquia</span>
+            <h3>Muda por Galho</h3>
+            <ul>
+              <li>Clonagem fiel da planta mãe.</li>
+              <li>Crescimento mais rápido e previsível.</li>
+              <li>Menor formação de caudex.</li>
+              <li>Menor valor ornamental em geral.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="badge premium">Premium</span>
+            <h3>Muda Enxertada</h3>
+            <ul>
+              <li>Cor da flor garantida e floração antecipada.</li>
+              <li>Alta aplicação comercial e múltiplos enxertos.</li>
+              <li>Grande variedade de cores e combinações.</li>
+              <li>Pode ter menor durabilidade que muda de semente.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Comparativo tecnico">
+        <div class="section-heading">
+          <h2>Comparativo Técnico</h2>
+          <p>Comparação entre velocidade, previsibilidade e valor comercial.</p>
+        </div>
+        <table class="tabela">
+          <thead>
+            <tr><th>Critério</th><th>Semente</th><th>Estaquia</th><th>Enxerto</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Crescimento</td><td>Lento</td><td>Rápido</td><td>Médio</td></tr>
+            <tr><td>Formação de caudex</td><td>Excelente</td><td>Baixa</td><td>Boa</td></tr>
+            <tr><td>Previsibilidade da flor</td><td>Baixa</td><td>Alta</td><td>Altíssima</td></tr>
+            <tr><td>Valor comercial</td><td>Médio/Alto</td><td>Médio</td><td>Alto</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section" aria-label="Como cuidar e adquirir mudas">
+        <div class="section-heading">
+          <h2>Como Cuidar e Adquirir sua Muda</h2>
+          <p>Passo a passo para comprar, receber e estabelecer uma muda de Rosa do Deserto com sucesso.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card">
+            <span class="badge sucesso">1. Aquisição</span>
+            <h3>Escolha da Muda</h3>
+            <ul>
+              <li>Prefira mudas com caudex firme e raízes sem odor.</li>
+              <li>Verifique se a muda está saudável, sem manchas ou apodrecimento.</li>
+              <li>Compre de fornecedor com procedência e histórico comprovado.</li>
+              <li>Para garantia de cor, opte por muda enxertada já florida.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="badge alerta">2. Recebimento</span>
+            <h3>Chegou em Casa</h3>
+            <ul>
+              <li>Deixe a muda em local arejado e com sombra por 3 a 5 dias.</li>
+              <li>Não regue imediatamente; espere a planta se adaptar ao ambiente.</li>
+              <li>Inspecione as raízes — retire partes moles ou escuras com tesoura limpa.</li>
+              <li>Trate cortes com canela em pó ou fungicida antes de plantar.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="badge premium">3. Plantio</span>
+            <h3>Vaso e Substrato</h3>
+            <ul>
+              <li>Use vaso com boa drenagem, de preferência de barro ou plástico claro.</li>
+              <li>Substrato: mistura de areia grossa, perlita e terra vegetal (2:1:1).</li>
+              <li>Posicione o caudex levemente acima do nível do substrato.</li>
+              <li>Primeira rega: apenas após 5 a 7 dias do plantio.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="badge sucesso">4. Rega</span>
+            <h3>Frequência de Rega</h3>
+            <ul>
+              <li>Regue apenas quando o substrato estiver completamente seco.</li>
+              <li>No verão: a cada 4 a 7 dias dependendo do calor e vento.</li>
+              <li>No inverno: reduza para 1 vez por semana ou menos.</li>
+              <li>Excesso de água é a principal causa de morte das mudas.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="badge alerta">5. Luz e Ambiente</span>
+            <h3>Sol e Temperatura</h3>
+            <ul>
+              <li>Exige sol pleno mínimo de 6 horas por dia para florir bem.</li>
+              <li>Evite ambientes frios e úmidos; ideal entre 20°C e 38°C.</li>
+              <li>No inverno, proteja do frio excessivo e da chuva prolongada.</li>
+              <li>Adapta-se muito bem a varandas, jardins e ambientes externos.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="badge premium">6. Adubação</span>
+            <h3>Nutrição da Muda</h3>
+            <ul>
+              <li>Adubo com alto teor de fósforo e potássio estimula a floração.</li>
+              <li>Aplique fertilizante líquido a cada 15 dias na fase de crescimento.</li>
+              <li>Evite excesso de nitrogênio, que favorece folhas em vez de flores.</li>
+              <li>Adubo orgânico como húmus de minhoca pode ser usado mensalmente.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Variacao de cores">
+        <div class="section-heading">
+          <h2>Variação de Cores</h2>
+          <p>Cores raras aumentam significativamente o valor da planta no mercado especializado.</p>
+        </div>
+        <div class="mudas-variacao-grade">
+
+          <article class="mudas-var-bloco">
+            <figure class="mudas-var-foto">
+              <img src="imagnes/Fotos Mudas/mudas (1).jpeg" alt="Rosa do Deserto cor rosa" loading="lazy" />
+            </figure>
+            <div class="mudas-var-descricao">
+              <span class="cor-card-label rosa-label">Rosa</span>
+              <p>Cor mais comum e versátil. Alta procura por iniciantes, colecionadores e presenteadores. Combina bem em varandas e jardins.</p>
+            </div>
+          </article>
+
+          <article class="mudas-var-bloco">
+            <figure class="mudas-var-foto">
+              <img src="imagnes/Fotos Mudas/mudas (2).jpeg" alt="Rosa do Deserto cor vermelha" loading="lazy" />
+            </figure>
+            <div class="mudas-var-descricao">
+              <span class="cor-card-label vermelha-label">Vermelha</span>
+              <p>Tom intenso e vibrante, muito valorizado esteticamente. Contraste marcante com a folhagem verde-escura do adenium.</p>
+            </div>
+          </article>
+
+          <article class="mudas-var-bloco">
+            <figure class="mudas-var-foto">
+              <img src="imagnes/Fotos Mudas/mudas (3).jpeg" alt="Rosa do Deserto cor branca" loading="lazy" />
+            </figure>
+            <div class="mudas-var-descricao">
+              <span class="cor-card-label branca-label">Branca</span>
+              <p>Cor elegante e rara, muito valorizada em coleções finas. Transmite pureza e sofisticação, ideal para colecionar ou presentear.</p>
+            </div>
+          </article>
+
+          <article class="mudas-var-bloco">
+            <figure class="mudas-var-foto">
+              <img src="imagnes/Fotos Mudas/mudas (4).jpeg" alt="Rosa do Deserto cor roxa" loading="lazy" />
+            </figure>
+            <div class="mudas-var-descricao">
+              <span class="cor-card-label roxa-label">Roxa</span>
+              <p>Tonalidade exótica com alta demanda no mercado de raridades. Obtida principalmente por enxertia de variedades selecionadas.</p>
+            </div>
+          </article>
+
+          <article class="mudas-var-bloco">
+            <figure class="mudas-var-foto">
+              <img src="imagnes/Fotos Mudas/mudas (5).jpeg" alt="Rosa do Deserto cor amarela" loading="lazy" />
+            </figure>
+            <div class="mudas-var-descricao">
+              <span class="cor-card-label amarela-label">Amarela</span>
+              <p>Uma das cores mais raras e difíceis de obter. Muito valorizada por colecionadores; produzida quase exclusivamente por enxertia.</p>
+            </div>
+          </article>
+
+          <article class="mudas-var-bloco">
+            <figure class="mudas-var-foto">
+              <img src="imagnes/Fotos Mudas/mudas (9).jpeg" alt="Rosa do Deserto cor mesclada" loading="lazy" />
+            </figure>
+            <div class="mudas-var-descricao">
+              <span class="cor-card-label mesclada-label">Mesclada</span>
+              <p>Combinação de duas ou mais cores no mesmo cacho floral. Alta raridade e grande apelo visual no mercado especializado.</p>
+            </div>
+          </article>
+
+        </div>
+        <p class="nota-valor">Cores raras aumentam significativamente o valor da planta no mercado especializado.</p>
+      </section>
     </div>
   </section>
 
-  <section class="section" aria-label="Formato de caudex">
-    <h2>5. Formato do Caudex</h2>
-    <div class="mini-grid">
-      <div class="mini-card">Caudex Alto</div>
-      <div class="mini-card">Caudex Baixo</div>
-      <div class="mini-card">Estilo Bonsai</div>
-      <div class="mini-card">Raiz Exposta</div>
+  <section class="plantio-media-showcase" id="resumo-visual-mudas">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Resumo Visual do Processo</h2>
+        <p>Da escolha da muda ao manejo diário: este fluxo visual ajuda a identificar padrão de qualidade, adaptação e potencial de venda.</p>
+      </div>
+      <div class="plantio-photo-grid mudas-gallery">
+        <figure class="plantio-photo-card"><img src="imagnes/Fotos Mudas/mudas (1).jpeg" alt="Lote inicial de mudas em avaliação" /><figcaption>Seleção inicial de mudas saudáveis.</figcaption></figure>
+        <figure class="plantio-photo-card"><img src="imagnes/Fotos Mudas/mudas (6).jpeg" alt="Detalhe do caudex em desenvolvimento" /><figcaption>Leitura estrutural do caudex e vigor.</figcaption></figure>
+        <figure class="plantio-photo-card"><img src="imagnes/Fotos Mudas/mudas (8).jpeg" alt="Muda pronta para apresentação" /><figcaption>Exemplar preparado para catálogo e venda.</figcaption></figure>
+      </div>
     </div>
   </section>
 
-  <section class="section" aria-label="Tipologia de flores">
-    <h2>6. Tipos de Flores</h2>
-    <div class="mini-grid">
-      <div class="mini-card">Flor Simples</div>
-      <div class="mini-card">Flor Dobrada</div>
-      <div class="mini-card">Flor Tripla</div>
+  <section class="section painel-mudas" aria-label="Painel interativo de mudas">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Painel Interativo de Mudas</h2>
+        <p>Um único painel com tipos de venda, cuidados e KPIs para leitura rápida de desempenho.</p>
+      </div>
+
+      <div class="painel-tabs" role="tablist" aria-label="Filtros do painel de mudas">
+        <button type="button" class="painel-tab active" data-tab="mudas-venda" aria-selected="true">Tipos de venda</button>
+        <button type="button" class="painel-tab" data-tab="mudas-cuidados" aria-selected="false">Cuidados</button>
+        <button type="button" class="painel-tab" data-tab="mudas-kpi" aria-selected="false">KPI + Dashboard</button>
+      </div>
+
+      <div class="painel-conteudo">
+        <div class="painel-bloco active" id="mudas-venda">
+          <div class="cards-grid dashboard-cards">
+            <article class="card"><h3>Muda por semente</h3><p>Perfil com maior valor estético e público colecionador.</p></article>
+            <article class="card"><h3>Muda por galho</h3><p>Linha de giro rápido para clientes que buscam preço acessível.</p></article>
+            <article class="card"><h3>Muda enxertada</h3><p>Produto premium com cor previsível e alta procura no varejo.</p></article>
+          </div>
+        </div>
+
+        <div class="painel-bloco" id="mudas-cuidados">
+          <div class="cards-grid dashboard-cards">
+            <article class="card"><h3>Recebimento</h3><p>Ao chegar, manter em local arejado e sem rega imediata.</p></article>
+            <article class="card"><h3>Plantio inicial</h3><p>Usar substrato drenante e vaso com furos para evitar encharcamento.</p></article>
+            <article class="card"><h3>Rotina de manejo</h3><p>Regar apenas com substrato seco e garantir pelo menos 6h de sol.</p></article>
+          </div>
+        </div>
+
+        <div class="painel-bloco" id="mudas-kpi">
+          <div class="cards-grid dashboard-cards" aria-label="KPIs e dashboard de mudas">
+            <article class="card"><h3>Taxa de pegamento</h3><p><strong>KPI:</strong> 85% - 95%</p></article>
+            <article class="card"><h3>Floração média</h3><p><strong>KPI:</strong> 6 - 18 meses</p></article>
+            <article class="card"><h3>Valor médio de venda</h3><p><strong>KPI:</strong> R$ 35 - R$ 180</p></article>
+            <article class="card"><h3>Demanda por enxerto</h3><p><strong>KPI:</strong> Alta no varejo</p></article>
+            <article class="card"><h3>Desempenho por método</h3><p>Dashboard comparando produção, crescimento e previsibilidade.</p></article>
+            <article class="card"><h3>Status do lote</h3><p>Dashboard com evolução do lote e prioridade de venda.</p></article>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="section" aria-label="Variação de cores">
-    <h2>7. Variação de Cores</h2>
-    <div class="cores">
-      <span class="cor rosa">Rosa</span>
-      <span class="cor vermelha">Vermelha</span>
-      <span class="cor branca">Branca</span>
-      <span class="cor roxa">Roxa</span>
-      <span class="cor amarela">Amarela</span>
-      <span class="cor mesclada">Mesclada</span>
-    </div>
-    <p class="nota-valor">Cores raras aumentam significativamente o valor da planta no mercado especializado.</p>
-  </section>
-
-  <section class="section" aria-label="Visual de apoio">
-    <h2>8. Formatos de Imagem para Visualização</h2>
-    <div class="mudas-gallery">
-      <figure>
-        <img src="imagnes/plantio/plantio.jpg" alt="Mudas em bancada de viveiro" />
-        <figcaption>Plano geral de lote para avaliação de padrão.</figcaption>
-      </figure>
-      <figure>
-        <img src="imagnes/plantio/plantiio__.jpg" alt="Detalhe de caudex" />
-        <figcaption>Close no caudex para classificação estética.</figcaption>
-      </figure>
-      <figure>
-        <img src="imagnes/plantio/plantio_.png" alt="Muda florida em vaso" />
-        <figcaption>Imagem de catálogo para venda online.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="conclusao">
+  <section class="conclusao container">
     <h2>Conclusão Técnica</h2>
     <p>Semente, estaquia e enxerto atendem perfis diferentes de produção. A decisão ideal depende de objetivo comercial, tempo de giro e nível de valorização estética desejado.</p>
   </section>
-
 </main>
 
 <footer class="footer">
@@ -198,6 +379,36 @@
     <p>Painel técnico de mudas com foco em classificação e valor de mercado.</p>
   </div>
 </footer>
+
+<script>
+  (function () {
+    const tabs = document.querySelectorAll('.mudas-page .painel-tab');
+    const blocos = document.querySelectorAll('.mudas-page .painel-bloco');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+
+        tabs.forEach((btn) => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-selected', 'false');
+        });
+
+        blocos.forEach((bloco) => {
+          bloco.classList.remove('active');
+        });
+
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const painelAtivo = document.getElementById(target);
+        if (painelAtivo) {
+          painelAtivo.classList.add('active');
+        }
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>

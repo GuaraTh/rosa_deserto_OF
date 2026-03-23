@@ -186,3 +186,60 @@
     font-size: 0.86rem;
   }
 }
+
+/* ===== ALINHAMENTO EM UMA RETA (ABA PODAS) ===== */
+.podas-page .container {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.podas-page .plantio-video-rapido .container,
+.podas-page .plantio-overview .container,
+.podas-page .plantio-media-showcase .container,
+.podas-page .guia-basico .container,
+.podas-page .dashboard-instrucoes .container,
+.podas-page .section .container,
+.podas-page .conclusao.container {
+  max-width: 920px;
+}
+
+.podas-page .cards-grid,
+.podas-page .kpi-grid,
+.podas-page .grid-2,
+.podas-page .plantio-photo-grid,
+.podas-page .simulador-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.podas-page .video-rapido-layout {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.podas-page .card,
+.podas-page .kpi,
+.podas-page .plantio-photo-card,
+.podas-page .video-rapido-player,
+.podas-page .video-rapido-info,
+.podas-page .tabela,
+.podas-page .podas-simulador,
+.podas-page .simulador-resultado,
+.podas-page .overview-separacao,
+.podas-page .podas-steps {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.podas-page .section-heading {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}

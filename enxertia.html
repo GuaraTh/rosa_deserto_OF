@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="style/styles-base.css" />
   <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/plantio.css" />
   <link rel="stylesheet" href="style/enxertia.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="script.js"></script>
@@ -32,168 +33,145 @@
   </div>
 </header>
 
-<main class="container enxertia-page">
-  <section class="hero-enxertia">
-    <small>Manejo Avançado | Adenium obesum</small>
-    <h1>Enxertia Profissional: método, controle e escala</h1>
-    <p>Transforme processo artesanal em operação orientada por dados com indicadores, risco e valorização comercial.</p>
-  </section>
-
-  <section class="section" aria-label="Métodos de enxertia">
-    <h2>Métodos de Enxertia</h2>
-    <div class="cards-grid">
-      <article class="card">
-        <span class="badge sucesso">Flat Graft</span>
-        <h3>Enxertia de Pressão</h3>
-        <p>Cortes horizontais no cavalo e enxerto unidos por pressão com fita/elástico.</p>
-        <p><strong>Valor operacional:</strong> baixo custo por unidade e alta taxa de cicatrização.</p>
-      </article>
-      <article class="card">
-        <span class="badge alerta">Cleft Graft</span>
-        <h3>Enxertia de Garfagem</h3>
-        <p>Encaixe em V no porta-enxerto para união mecânica mais forte.</p>
-        <p><strong>Valor operacional:</strong> maior firmeza estrutural, porém com custo de mão de obra mais alto.</p>
-      </article>
-      <article class="card">
-        <span class="badge premium">Budding</span>
-        <h3>Enxertia de Borbulhia</h3>
-        <p>Uso de uma gema para multiplicar genética premium em larga escala.</p>
-        <p><strong>Valor operacional:</strong> maximiza o inventário de variedades raras.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section" aria-label="Visual de referência">
-    <h2>Formatos de Imagens para Visualização</h2>
-    <div class="enxertia-gallery">
-      <figure>
-        <img src="imagnes/plantio/plantio.jpg" alt="Enxertia de pressão em fase de união" />
-        <figcaption>Plano Aberto: posicionamento e fixação do enxerto.</figcaption>
-      </figure>
-      <figure>
-        <img src="imagnes/plantio/plantiio__.jpg" alt="Garfagem com encaixe em V" />
-        <figcaption>Macro Técnica: alinhamento cambial e vedação.</figcaption>
-      </figure>
-      <figure>
-        <img src="imagnes/plantio/plantio_.png" alt="Borbulhia com gema ativa" />
-        <figcaption>Sequência Evolutiva: D+1, D+7 e D+15.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="section" aria-label="Indicadores e dashboard">
-    <h2>KPIs de Sucesso e Controle</h2>
-    <div class="kpi-grid">
-      <article class="kpi"><h3>Taxa de pegamento</h3><p>92% - 95%</p></article>
-      <article class="kpi"><h3>Cicatrização</h3><p>7 - 15 dias</p></article>
-      <article class="kpi"><h3>Perda por fungo (sem SOP)</h3><p>até 30%</p></article>
-      <article class="kpi"><h3>Perda com SOP ativo</h3><p>&lt; 5%</p></article>
-      <article class="kpi"><h3>Janela ideal</h3><p>Primavera/Verão</p></article>
-      <article class="kpi"><h3>Tempo para venda</h3><p>4 - 6 meses</p></article>
-    </div>
-    <div class="graficos enxertia-graficos">
-      <div class="grafico">
-        <h4>Tempo para Venda por Método</h4>
-        <canvas id="enxertiaMetodoChart"></canvas>
+<main class="enxertia-page">
+  <section class="plantio-video-rapido" id="video-rapido">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Vídeo Rápido: Enxertia Profissional</h2>
+        <p>Método, controle e escala no mesmo arranjo visual usado na aba de plantio.</p>
       </div>
-      <div class="grafico">
-        <h4>Risco Operacional (0-100)</h4>
-        <canvas id="enxertiaRiscoChart"></canvas>
+      <div class="video-rapido-layout">
+        <div class="video-rapido-player">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Vídeo explicativo das etapas da enxertia profissional"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <aside class="video-rapido-info">
+          <h3>O que esta aba cobre</h3>
+          <ul>
+            <li>Métodos de enxertia e suas aplicações operacionais.</li>
+            <li>KPIs de pegamento, risco e tempo para venda.</li>
+            <li>Fatores de sucesso, higiene e fisiologia da planta.</li>
+            <li>Valorização comercial e simulador de raridade.</li>
+          </ul>
+          <a href="#guia-enxertia" class="btn btn-primary">Ver Guia Técnico</a>
+        </aside>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-label="Variáveis de controle">
-    <h2>Fatores de Sucesso e Variáveis de Controle</h2>
-    <div class="grid-2">
-      <article class="card">
-        <h3>Higiene e Sanidade</h3>
-        <ul>
-          <li>Esterilização de lâmina com álcool 70% entre plantas.</li>
-          <li>Vedação total do ponto de união para evitar oxidação.</li>
-          <li>Controle de umidade para prevenção de fungos.</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Fisiologia da Planta</h3>
-        <ul>
-          <li>Sincronia de diâmetro entre enxerto e porta-enxerto.</li>
-          <li>Priorizar fase de crescimento ativo da planta.</li>
-          <li>No inverno, elevar controle de rejeição e tempo de recuperação.</li>
-        </ul>
-      </article>
+  <section class="guia-basico" id="guia-enxertia">
+    <div class="container">
+      <div class="section-heading hero-enxertia">
+        <small>Manejo Avançado | Adenium obesum</small>
+        <h1>Enxertia Profissional: método, controle e escala</h1>
+        <p>Transforme processo artesanal em operação orientada por dados com indicadores, risco e valorização comercial.</p>
+      </div>
+
+      <section class="section" aria-label="Métodos de enxertia">
+        <div class="section-heading">
+          <h2>Métodos de Enxertia</h2>
+          <p>Técnicas disponíveis e sua leitura operacional.</p>
+        </div>
+        <div class="cards-grid">
+          <article class="card"><span class="badge sucesso">Flat Graft</span><h3>Enxertia de Pressão</h3><p>Cortes horizontais no cavalo e enxerto unidos por pressão com fita/elástico.</p><p><strong>Valor operacional:</strong> baixo custo por unidade e alta taxa de cicatrização.</p></article>
+          <article class="card"><span class="badge alerta">Cleft Graft</span><h3>Enxertia de Garfagem</h3><p>Encaixe em V no porta-enxerto para união mecânica mais forte.</p><p><strong>Valor operacional:</strong> maior firmeza estrutural, porém com custo de mão de obra mais alto.</p></article>
+          <article class="card"><span class="badge premium">Budding</span><h3>Enxertia de Borbulhia</h3><p>Uso de uma gema para multiplicar genética premium em larga escala.</p><p><strong>Valor operacional:</strong> maximiza o inventário de variedades raras.</p></article>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Variaveis de controle">
+        <div class="section-heading">
+          <h2>Fatores de Sucesso e Variáveis de Controle</h2>
+          <p>Controle sanitário e fisiológico para reduzir falhas de pegamento.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card"><h3>Higiene e Sanidade</h3><ul><li>Esterilização de lâmina com álcool 70% entre plantas.</li><li>Vedação total do ponto de união para evitar oxidação.</li><li>Controle de umidade para prevenção de fungos.</li></ul></article>
+          <article class="card"><h3>Fisiologia da Planta</h3><ul><li>Sincronia de diâmetro entre enxerto e porta-enxerto.</li><li>Priorizar fase de crescimento ativo da planta.</li><li>No inverno, elevar controle de rejeição e tempo de recuperação.</li></ul></article>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Logica de negocio">
+        <div class="section-heading">
+          <h2>Lógica de Negócio e Valorização</h2>
+          <p>Comparação entre planta de semente e planta enxertada.</p>
+        </div>
+        <table class="tabela">
+          <thead><tr><th>Atributo</th><th>Planta de Semente</th><th>Planta Enxertada</th></tr></thead>
+          <tbody>
+            <tr><td>Previsibilidade</td><td>Baixa (flor surpresa)</td><td>100% cópia da matriz</td></tr>
+            <tr><td>Tempo para venda</td><td>12 - 18 meses</td><td>4 - 6 meses</td></tr>
+            <tr><td>Escalabilidade</td><td>Dependente de polinização</td><td>Dependente de galhos da matriz</td></tr>
+            <tr><td>ROI</td><td>Baixo / Médio</td><td>Alto a Altíssimo</td></tr>
+          </tbody>
+        </table>
+      </section>
     </div>
   </section>
 
-  <section class="section" aria-label="Lógica de negócio">
-    <h2>Lógica de Negócio e Valorização</h2>
-    <table class="tabela">
-      <thead>
-        <tr>
-          <th>Atributo</th>
-          <th>Planta de Semente</th>
-          <th>Planta Enxertada</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Previsibilidade</td>
-          <td>Baixa (flor surpresa)</td>
-          <td>100% cópia da matriz</td>
-        </tr>
-        <tr>
-          <td>Tempo para venda</td>
-          <td>12 - 18 meses</td>
-          <td>4 - 6 meses</td>
-        </tr>
-        <tr>
-          <td>Escalabilidade</td>
-          <td>Dependente de polinização</td>
-          <td>Dependente de galhos da matriz</td>
-        </tr>
-        <tr>
-          <td>ROI</td>
-          <td>Baixo / Médio</td>
-          <td>Alto a Altíssimo</td>
-        </tr>
-      </tbody>
-    </table>
+  <section class="plantio-media-showcase" id="resumo-visual-enxertia">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Resumo Visual do Processo</h2>
+        <p>Este resumo mostra preparação, união do enxerto e evolução da cicatrização para garantir pegamento e acelerar valor comercial.</p>
+      </div>
+      <div class="enxertia-processo-destaque" aria-label="Resumo visual ampliado da enxertia">
+        <article class="enxertia-bloco-visual">
+          <figure class="enxertia-foto-grande">
+            <img src="imagnes/Fotos Enxertia/enxertia.jpg" alt="Preparacao do porta-enxerto para enxertia" />
+          </figure>
+          <div class="enxertia-resumo-lado">
+            <h3>1. Preparação correta</h3>
+            <p>Escolha cavalo e cavaleiro com diâmetro compatível, higienize a lâmina e faça corte limpo. Essa etapa define boa parte da taxa de pegamento e reduz perdas por contaminação.</p>
+          </div>
+        </article>
+
+        <article class="enxertia-bloco-visual">
+          <figure class="enxertia-foto-grande">
+            <img src="imagnes/Fotos Enxertia/enxertia_.jpg" alt="Uniao cambial e fixacao da enxertia" />
+          </figure>
+          <div class="enxertia-resumo-lado">
+            <h3>2. União e cicatrização</h3>
+            <p>Alinhe o câmbio, fixe sem folga e mantenha ambiente controlado. Nos dias seguintes, observe turgor e fechamento da união para confirmar evolução da cicatrização.</p>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
   <section class="section" aria-label="Simulador de valor">
-    <h2>Simulador de Grau de Raridade</h2>
-    <div class="enxertia-simulador card">
-      <p>Defina variedade, método e condição operacional para calcular valor projetado e risco.</p>
-      <div class="simulador-grid">
-        <label for="raridadeEnxerto">Variedade</label>
-        <select id="raridadeEnxerto">
-          <option value="1">Comum</option>
-          <option value="1.6">Amarela</option>
-          <option value="2.2">Tripla</option>
-          <option value="3">Flor Negra</option>
-        </select>
-        <label for="metodoEnxertia">Método</label>
-        <select id="metodoEnxertia">
-          <option value="flat">Flat Graft</option>
-          <option value="garfagem">Garfagem</option>
-          <option value="borbulhia">Borbulhia</option>
-        </select>
-        <label class="checkline"><input id="sopAtivo" type="checkbox" checked /> SOP de higiene ativo</label>
+    <div class="container">
+      <div class="section-heading">
+        <h2>Simulador de Grau de Raridade</h2>
+        <p>Defina variedade, método e condição operacional para calcular valor projetado e risco.</p>
       </div>
-      <button id="calcularEnxertia" class="btn btn-primary">Calcular projeção</button>
-      <div class="simulador-resultado" id="resultadoEnxertia">
-        <p><strong>Valor projetado:</strong> R$ 120,00</p>
-        <p><strong>Risco operacional:</strong> Baixo</p>
-        <p><strong>Tempo estimado de venda:</strong> 4 a 6 meses</p>
+      <div class="enxertia-simulador card">
+        <div class="simulador-grid">
+          <label for="raridadeEnxerto">Variedade</label>
+          <select id="raridadeEnxerto"><option value="1">Comum</option><option value="1.6">Amarela</option><option value="2.2">Tripla</option><option value="3">Flor Negra</option></select>
+          <label for="metodoEnxertia">Método</label>
+          <select id="metodoEnxertia"><option value="flat">Flat Graft</option><option value="garfagem">Garfagem</option><option value="borbulhia">Borbulhia</option></select>
+          <label class="checkline"><input id="sopAtivo" type="checkbox" checked /> SOP de higiene ativo</label>
+        </div>
+        <button id="calcularEnxertia" class="btn btn-primary">Calcular projeção</button>
+        <div class="simulador-resultado" id="resultadoEnxertia">
+          <p><strong>Valor projetado:</strong> R$ 120,00</p>
+          <p><strong>Risco operacional:</strong> Baixo</p>
+          <p><strong>Tempo estimado de venda:</strong> 4 a 6 meses</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="conclusao">
+  <section class="conclusao container">
     <h2>Insight de Gestão</h2>
     <p>Seu modelo funciona como um mini ERP de cultivo de nicho: mede risco, padroniza execução e transforma conhecimento técnico em margem comercial.</p>
   </section>
-
 </main>
 
 <footer class="footer">

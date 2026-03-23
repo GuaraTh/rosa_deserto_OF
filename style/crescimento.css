@@ -163,3 +163,59 @@
     font-size: 0.86rem;
   }
 }
+
+/* ===== ALINHAMENTO EM UMA RETA (ABA CRESCIMENTO) ===== */
+.crescimento-page .container {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crescimento-page .plantio-video-rapido .container,
+.crescimento-page .plantio-overview .container,
+.crescimento-page .plantio-media-showcase .container,
+.crescimento-page .guia-basico .container,
+.crescimento-page .dashboard-instrucoes .container,
+.crescimento-page .section .container,
+.crescimento-page .conclusao.container {
+  max-width: 920px;
+}
+
+.crescimento-page .cards-grid,
+.crescimento-page .kpi-grid,
+.crescimento-page .grid-2,
+.crescimento-page .plantio-photo-grid,
+.crescimento-page .simulador-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crescimento-page .video-rapido-layout {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crescimento-page .card,
+.crescimento-page .kpi,
+.crescimento-page .plantio-photo-card,
+.crescimento-page .video-rapido-player,
+.crescimento-page .video-rapido-info,
+.crescimento-page .tabela,
+.crescimento-page .crescimento-simulador,
+.crescimento-page .simulador-resultado,
+.crescimento-page .overview-separacao {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crescimento-page .section-heading {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}

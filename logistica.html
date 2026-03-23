@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="style/styles-base.css" />
   <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/plantio.css" />
   <link rel="stylesheet" href="style/log.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="script.js"></script>
@@ -30,130 +31,169 @@
     </div>
   </header>
 
-  <main class="container logistica-page">
-    <section class="hero-logistica">
-      <small>Comercial e Entrega | Adenium Store</small>
-      <h1>Logística e Matriz de Preços</h1>
-      <p>Estruture preço, margem e expedição com base em estágio da planta, tipo de flor e raridade para vender com previsibilidade.</p>
-    </section>
-
-    <section class="section" aria-label="Kpis comerciais e logísticos">
-      <h2>KPIs de Operação</h2>
-      <div class="kpi-grid">
-        <article class="kpi"><h3>Ticket médio</h3><p>R$ 149,90</p></article>
-        <article class="kpi"><h3>Prazo de envio</h3><p>24h úteis</p></article>
-        <article class="kpi"><h3>Taxa de dano</h3><p>&lt; 5%</p></article>
-        <article class="kpi"><h3>Margem na linha rara</h3><p>Alta</p></article>
+  <main class="logistica-page">
+    <section class="plantio-video-rapido" id="video-rapido">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Vídeo Rápido: Logística e Preço</h2>
+          <p>Preço, margem e expedição reorganizados na mesma estrutura visual do plantio.</p>
+        </div>
+        <div class="video-rapido-layout">
+          <div class="video-rapido-player">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Vídeo explicativo das etapas de logística e venda"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <aside class="video-rapido-info">
+            <h3>O que você vai revisar</h3>
+            <ul>
+              <li>KPIs comerciais e logísticos para a operação.</li>
+              <li>Matriz de preços por estágio, tipo de flor e raridade.</li>
+              <li>Simulador de preço e proposta de leilão exclusivo.</li>
+              <li>Dashboard de margem, risco de expedição e fotos de catálogo.</li>
+            </ul>
+            <a href="#guia-logistica" class="btn btn-primary">Ver Guia Técnico</a>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-label="Matriz de preços">
-      <h2>Matriz de Preços por Estágio</h2>
-      <table class="tabela">
-        <thead>
-          <tr>
-            <th>Categoria</th>
-            <th>Tipo</th>
-            <th>Faixa</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Mudas (sem enxertia)</td><td>Flor simples comum</td><td>R$ 29,90 - R$ 39,90</td></tr>
-          <tr><td>Mudas (sem enxertia)</td><td>Bicolor / matizada</td><td>R$ 39,90 - R$ 59,90</td></tr>
-          <tr><td>Mudas (sem enxertia)</td><td>Potencial rara</td><td>R$ 49,90 - R$ 79,90</td></tr>
-          <tr><td>Mudas formadas</td><td>Flor simples</td><td>R$ 59,90 - R$ 79,90</td></tr>
-          <tr><td>Mudas formadas</td><td>Bicolor / matizada</td><td>R$ 79,90 - R$ 119,90</td></tr>
-          <tr><td>Mudas formadas</td><td>Diferenciada</td><td>R$ 99,90 - R$ 149,90</td></tr>
-          <tr><td>Enxertadas</td><td>Flor simples</td><td>R$ 99,90 - R$ 129,90</td></tr>
-          <tr><td>Enxertadas</td><td>Flor dobrada</td><td>R$ 129,90 - R$ 199,90</td></tr>
-          <tr><td>Enxertadas</td><td>Flor tripla</td><td>R$ 179,90 - R$ 279,90</td></tr>
-          <tr><td>Enxertadas</td><td>Multicolor / rajado</td><td>R$ 199,90 - R$ 349,90</td></tr>
-          <tr><td>Linha rara</td><td>Dobrada rara</td><td>R$ 249,90 - R$ 399,90</td></tr>
-          <tr><td>Linha rara</td><td>Tripla rara</td><td>R$ 299,90 - R$ 499,90</td></tr>
-          <tr><td>Linha rara</td><td>Híbrida premium</td><td>R$ 399,90 - R$ 800+</td></tr>
-        </tbody>
-      </table>
+    <section class="guia-basico" id="guia-logistica">
+      <div class="container">
+        <div class="section-heading hero-logistica">
+          <small>Comercial e Entrega | Adenium Store</small>
+          <h1>Logística e Matriz de Preços</h1>
+          <p>Estruture preço, margem e expedição com base em estágio da planta, tipo de flor e raridade para vender com previsibilidade.</p>
+        </div>
+
+        <section class="section" aria-label="Matriz de precos">
+          <div class="section-heading">
+            <h2>Matriz de Preços por Estágio</h2>
+            <p>Faixas sugeridas por categoria, tipo de flor e raridade.</p>
+          </div>
+          <table class="tabela">
+            <thead><tr><th>Categoria</th><th>Tipo</th><th>Faixa</th></tr></thead>
+            <tbody>
+              <tr><td>Mudas (sem enxertia)</td><td>Flor simples comum</td><td>R$ 29,90 - R$ 39,90</td></tr>
+              <tr><td>Mudas (sem enxertia)</td><td>Bicolor / matizada</td><td>R$ 39,90 - R$ 59,90</td></tr>
+              <tr><td>Mudas (sem enxertia)</td><td>Potencial rara</td><td>R$ 49,90 - R$ 79,90</td></tr>
+              <tr><td>Mudas formadas</td><td>Flor simples</td><td>R$ 59,90 - R$ 79,90</td></tr>
+              <tr><td>Mudas formadas</td><td>Bicolor / matizada</td><td>R$ 79,90 - R$ 119,90</td></tr>
+              <tr><td>Mudas formadas</td><td>Diferenciada</td><td>R$ 99,90 - R$ 149,90</td></tr>
+              <tr><td>Enxertadas</td><td>Flor simples</td><td>R$ 99,90 - R$ 129,90</td></tr>
+              <tr><td>Enxertadas</td><td>Flor dobrada</td><td>R$ 129,90 - R$ 199,90</td></tr>
+              <tr><td>Enxertadas</td><td>Flor tripla</td><td>R$ 179,90 - R$ 279,90</td></tr>
+              <tr><td>Enxertadas</td><td>Multicolor / rajado</td><td>R$ 199,90 - R$ 349,90</td></tr>
+              <tr><td>Linha rara</td><td>Dobrada rara</td><td>R$ 249,90 - R$ 399,90</td></tr>
+              <tr><td>Linha rara</td><td>Tripla rara</td><td>R$ 299,90 - R$ 499,90</td></tr>
+              <tr><td>Linha rara</td><td>Híbrida premium</td><td>R$ 399,90 - R$ 800+</td></tr>
+            </tbody>
+          </table>
+
+          <div class="tipos-venda-grid" aria-label="Tipos vendidos com foto de referencia">
+            <article class="tipo-venda-card">
+              <div class="tipo-venda-foto">
+                <img src="imagnes/Fotos%20Mudas/foto_muda_4.jpg" alt="Mudas sem enxertia em vaso para venda" loading="lazy" />
+              </div>
+              <div class="tipo-venda-info">
+                <h3>Mudas sem enxertia</h3>
+                <p>Opção de entrada com foco em volume e preço acessível para clientes iniciantes.</p>
+              </div>
+            </article>
+
+            <article class="tipo-venda-card">
+              <div class="tipo-venda-foto">
+                <img src="imagnes/Fotos%20Mudas/foto_muda_2.jpg" alt="Muda formada com caudex mais desenvolvido" loading="lazy" />
+              </div>
+              <div class="tipo-venda-info">
+                <h3>Mudas formadas</h3>
+                <p>Categoria intermediária para cliente que busca planta mais estruturada e pronta para destaque.</p>
+              </div>
+            </article>
+
+            <article class="tipo-venda-card">
+              <div class="tipo-venda-foto">
+                <img src="imagnes/Fotos%20Enxertia/foto_enxertia_3.jpg" alt="Planta enxertada com floracao valorizada" loading="lazy" />
+              </div>
+              <div class="tipo-venda-info">
+                <h3>Enxertadas</h3>
+                <p>Linha com alto apelo comercial por padrao de flor e previsibilidade de resultado.</p>
+              </div>
+            </article>
+
+            <article class="tipo-venda-card">
+              <div class="tipo-venda-foto">
+                <img src="imagnes/Fotos%20Venda/foto_venda_.jpg" alt="Exemplar raro premium para publico colecionador" loading="lazy" />
+              </div>
+              <div class="tipo-venda-info">
+                <h3>Linha rara e premium</h3>
+                <p>Exemplares exclusivos para leilao e catalogo premium, com foco em margem alta.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Leilao exclusivo">
+          <div class="section-heading">
+            <h2>Leilão Exclusivo</h2>
+            <p>Estratégia para exemplares premium com alto valor agregado.</p>
+          </div>
+          <div class="card leilao-box">
+            <p><strong>Lance inicial:</strong> R$ 599,90</p>
+            <p><strong>Incremento mínimo:</strong> +R$ 100,00</p>
+            <p><strong>Duração:</strong> Sexta-feira 07:00 até Sábado 07:00</p>
+            <p><strong>Exemplares:</strong> Plantas 5+ anos, genética premium e caudex envelhecido/dourado.</p>
+            <ul>
+              <li>Certificado de autenticidade</li>
+              <li>QR Code de identificação e genética</li>
+              <li>Embalagem premium</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="plantio-media-showcase" id="resumo-visual-logistica">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Resumo Visual do Processo</h2>
+          <p>O fluxo visual abaixo resume classificação da planta, preparação para envio e apresentação final de venda para reduzir perdas e aumentar conversão.</p>
+        </div>
+        <div class="plantio-photo-grid">
+          <figure class="plantio-photo-card"><img src="imagnes/Fotos Venda/foto_venda.jpg" alt="Selecao de muda para venda" /><figcaption>Classificação por estágio e padrão comercial.</figcaption></figure>
+          <figure class="plantio-photo-card"><img src="imagnes/Fotos Venda/foto_venda_.jpg" alt="Planta preparada para envio" /><figcaption>Preparação técnica e embalagem para expedição.</figcaption></figure>
+          <figure class="plantio-photo-card"><img src="imagnes/Fotos%20Venda/foto_venda_.jpg" alt="Exemplar premium no catalogo" /><figcaption>Apresentação final para catálogo e venda.</figcaption></figure>
+        </div>
+      </div>
     </section>
 
     <section class="section" aria-label="Simulador de preço">
-      <h2>Simulador de Preço</h2>
-      <div class="card log-simulador">
-        <p>Selecione estágio, tipo de flor e raridade para gerar preço sugerido e estratégia de venda.</p>
-        <div class="simulador-grid">
-          <label for="estagioPreco">Estágio</label>
-          <select id="estagioPreco">
-            <option value="muda">Muda</option>
-            <option value="formada">Muda formada</option>
-            <option value="enxertada">Enxertada</option>
-            <option value="rara">Linha rara</option>
-          </select>
-
-          <label for="florPreco">Tipo de flor</label>
-          <select id="florPreco">
-            <option value="simples">Simples</option>
-            <option value="bicolor">Bicolor / Matizada</option>
-            <option value="dobrada">Dobrada</option>
-            <option value="tripla">Tripla</option>
-            <option value="multicolor">Multicolor / Rajado</option>
-            <option value="hibrida">Híbrida premium</option>
-          </select>
-
-          <label for="raridadePreco">Raridade</label>
-          <select id="raridadePreco">
-            <option value="comum">Comum</option>
-            <option value="diferenciada">Diferenciada</option>
-            <option value="rara">Rara</option>
-            <option value="premium">Premium Colecionador</option>
-          </select>
+      <div class="container">
+        <div class="section-heading">
+          <h2>Simulador de Preço</h2>
+          <p>Selecione estágio, tipo de flor e raridade para gerar preço sugerido e estratégia de venda.</p>
         </div>
-        <button id="calcularPreco" class="btn btn-primary">Calcular preço sugerido</button>
-        <div id="resultadoPreco" class="simulador-resultado">
-          <p><strong>Faixa sugerida:</strong> R$ 99,90 - R$ 129,90</p>
-          <p><strong>Preço recomendado:</strong> R$ 114,90</p>
-          <p><strong>Canal ideal:</strong> E-commerce + catálogo premium</p>
+        <div class="card log-simulador">
+          <div class="simulador-grid">
+            <label for="estagioPreco">Estágio</label>
+            <select id="estagioPreco"><option value="muda">Muda</option><option value="formada">Muda formada</option><option value="enxertada">Enxertada</option><option value="rara">Linha rara</option></select>
+            <label for="florPreco">Tipo de flor</label>
+            <select id="florPreco"><option value="simples">Simples</option><option value="bicolor">Bicolor / Matizada</option><option value="dobrada">Dobrada</option><option value="tripla">Tripla</option><option value="multicolor">Multicolor / Rajado</option><option value="hibrida">Híbrida premium</option></select>
+            <label for="raridadePreco">Raridade</label>
+            <select id="raridadePreco"><option value="comum">Comum</option><option value="diferenciada">Diferenciada</option><option value="rara">Rara</option><option value="premium">Premium Colecionador</option></select>
+          </div>
+          <button id="calcularPreco" class="btn btn-primary">Calcular preço sugerido</button>
+          <div id="resultadoPreco" class="simulador-resultado">
+            <p><strong>Faixa sugerida:</strong> R$ 99,90 - R$ 129,90</p>
+            <p><strong>Preço recomendado:</strong> R$ 114,90</p>
+            <p><strong>Canal ideal:</strong> E-commerce + catálogo premium</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Leilao exclusivo">
-      <h2>Leilão Exclusivo</h2>
-      <div class="card leilao-box">
-        <p><strong>Lance inicial:</strong> R$ 599,90</p>
-        <p><strong>Incremento mínimo:</strong> +R$ 100,00</p>
-        <p><strong>Duração:</strong> Sexta-feira 07:00 até Sábado 07:00</p>
-        <p><strong>Exemplares:</strong> Plantas 5+ anos, genética premium e caudex envelhecido/dourado.</p>
-        <ul>
-          <li>Certificado de autenticidade</li>
-          <li>QR Code de identificação e genética</li>
-          <li>Embalagem premium</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Graficos de logistica">
-      <h2>Dashboard Comercial e Logístico</h2>
-      <div class="graficos log-graficos">
-        <div class="grafico"><h4>Faixa de preço por categoria</h4><canvas id="logPrecoChart"></canvas></div>
-        <div class="grafico"><h4>Margem por linha</h4><canvas id="logMargemChart"></canvas></div>
-        <div class="grafico"><h4>Risco de expedição</h4><canvas id="logRiscoChart"></canvas></div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Opcao de fotos">
-      <h2>Opções de Fotos para Catálogo</h2>
-      <div class="log-gallery">
-        <figure>
-          <img src="imagnes/plantio/plantio.jpg" alt="Muda para venda" />
-          <figcaption>Foto comercial frontal com fundo limpo.</figcaption>
-        </figure>
-        <figure>
-          <img src="imagnes/plantio/plantiio__.jpg" alt="Detalhe do caudex" />
-          <figcaption>Close do caudex para validar valor ornamental.</figcaption>
-        </figure>
-        <figure>
-          <img src="imagnes/Fotos%20Venda/foto_venda_.jpg" alt="Planta premium para catalogo" />
-          <figcaption>Destaque da flor para classificação de raridade.</figcaption>
-        </figure>
       </div>
     </section>
   </main>
@@ -164,5 +204,6 @@
       <p>Centro de logística, preço e leilão premium.</p>
     </div>
   </footer>
+
 </body>
 </html>

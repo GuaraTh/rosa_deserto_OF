@@ -73,3 +73,107 @@
   border-radius: 0.9rem;
   text-align: center;
 }
+
+.caudex-page .painel-caudex {
+  margin-top: 1.6rem;
+}
+
+.caudex-page .painel-tabs {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.8rem auto 1rem;
+  max-width: 760px;
+}
+
+.caudex-page .painel-tab {
+  border: 1px solid #d8c6ad;
+  background: #fff7ec;
+  color: #5f4f3a;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.caudex-page .painel-tab.active {
+  background: #c37a35;
+  border-color: #c37a35;
+  color: #fff;
+}
+
+.caudex-page .painel-conteudo {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.caudex-page .painel-bloco {
+  display: none;
+}
+
+.caudex-page .painel-bloco.active {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .caudex-page .painel-tab {
+    width: 100%;
+  }
+}
+
+/* ===== ALINHAMENTO EM UMA RETA (ABA CAUDEX) ===== */
+.caudex-page .container {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caudex-page .plantio-video-rapido .container,
+.caudex-page .plantio-overview .container,
+.caudex-page .plantio-media-showcase .container,
+.caudex-page .guia-basico .container,
+.caudex-page .dashboard-instrucoes .container,
+.caudex-page .section .container,
+.caudex-page .conclusao.container {
+  max-width: 920px;
+}
+
+.caudex-page .cards-grid,
+.caudex-page .kpi-grid,
+.caudex-page .grid-2,
+.caudex-page .plantio-photo-grid,
+.caudex-page .simulador-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caudex-page .video-rapido-layout {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caudex-page .card,
+.caudex-page .kpi,
+.caudex-page .plantio-photo-card,
+.caudex-page .video-rapido-player,
+.caudex-page .video-rapido-info,
+.caudex-page .tabela,
+.caudex-page .simulador-resultado,
+.caudex-page .overview-separacao,
+.caudex-page .timeline {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caudex-page .section-heading {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}

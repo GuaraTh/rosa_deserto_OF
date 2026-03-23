@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="style/styles-base.css" />
   <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/plantio.css" />
   <link rel="stylesheet" href="style/poli.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="script.js"></script>
@@ -30,142 +31,135 @@
     </div>
   </header>
 
-  <main class="container polinizacao-page">
-    <section class="hero-polinizacao">
-      <small>Reprodução Controlada | Adenium obesum</small>
-      <h1>Polinização Manual da Rosa do Deserto</h1>
-      <p>Protocolo profissional para cruzamentos confiáveis, formação de vagens e rastreio de sementes com alta taxa de sucesso.</p>
-    </section>
-
-    <section class="section" aria-label="Visão geral">
-      <h2>Como funciona</h2>
-      <div class="cards-grid">
-        <article class="card">
-          <h3>Processo manual</h3>
-          <p>A polinização costuma ser manual porque a estrutura floral dificulta o contato natural do pólen com o estigma.</p>
-        </article>
-        <article class="card">
-          <h3>Ferramenta simples</h3>
-          <p>Palito de dente limpo permite coletar e transferir a massa de pólen com precisão.</p>
-        </article>
-        <article class="card">
-          <h3>Resultado esperado</h3>
-          <p>Formação de vagens duplas, colheita de sementes e ganho genético para novos cruzamentos.</p>
-        </article>
+  <main class="polinizacao-page">
+    <section class="plantio-video-rapido" id="video-rapido">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Vídeo Rápido: Polinização Manual</h2>
+          <p>Reprodução controlada e formação de sementes dentro da mesma estrutura visual do plantio.</p>
+        </div>
+        <div class="video-rapido-layout">
+          <div class="video-rapido-player">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Vídeo explicativo das etapas da polinização manual"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <aside class="video-rapido-info">
+            <h3>O que você vai revisar</h3>
+            <ul>
+              <li>Como funciona a polinização manual e por que ela é necessária.</li>
+              <li>Passo a passo detalhado e sinais de sucesso após a fecundação.</li>
+              <li>KPIs operacionais, dashboard e risco de perda de sementes.</li>
+              <li>Simulador para estimar probabilidade de pegamento.</li>
+            </ul>
+            <a href="#guia-polinizacao" class="btn btn-primary">Ver Guia Técnico</a>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-label="Passo a passo detalhado">
-      <h2>Passo a Passo Detalhado</h2>
-      <ol class="poli-steps">
-        <li><strong>Preparação:</strong> use flores abertas há 2-3 dias, preferencialmente entre 8h e 11h.</li>
-        <li><strong>Acesso:</strong> abra lateralmente o tubo floral até visualizar o cone central.</li>
-        <li><strong>Coleta do pólen:</strong> retire a massa esbranquiçada/amarelada das anteras com palito.</li>
-        <li><strong>Fecundação:</strong> leve o pólen da planta A ao estigma da planta B e faça movimento suave.</li>
-        <li><strong>Conferência:</strong> monitore base floral e pedúnculo por 5-7 dias para validar sucesso.</li>
-      </ol>
-    </section>
+    <section class="guia-basico" id="guia-polinizacao">
+      <div class="container">
+        <div class="section-heading hero-polinizacao">
+          <small>Reprodução Controlada | Adenium obesum</small>
+          <h1>Polinização Manual da Rosa do Deserto</h1>
+          <p>Protocolo profissional para cruzamentos confiáveis, formação de vagens e rastreio de sementes com alta taxa de sucesso.</p>
+        </div>
 
-    <section class="section" aria-label="Indicadores de polinização">
-      <h2>KPIs da Operação</h2>
-      <div class="kpi-grid">
-        <article class="kpi"><h3>Janela ideal</h3><p>8h às 11h</p></article>
-        <article class="kpi"><h3>Flor ideal</h3><p>2 a 3 dias aberta</p></article>
-        <article class="kpi"><h3>Confirmação inicial</h3><p>5 a 7 dias</p></article>
-        <article class="kpi"><h3>Maturação da vagem</h3><p>30 a 45 dias</p></article>
-        <article class="kpi"><h3>Taxa de sucesso média</h3><p>70% a 90%</p></article>
-        <article class="kpi"><h3>Risco de perda de sementes</h3><p>Alto sem amarração</p></article>
+        <section class="section" aria-label="Visao geral">
+          <div class="section-heading">
+            <h2>Como funciona</h2>
+            <p>Princípios do processo manual e resultado esperado.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="card"><h3>Processo manual</h3><p>A polinização costuma ser manual porque a estrutura floral dificulta o contato natural do pólen com o estigma.</p></article>
+            <article class="card"><h3>Ferramenta simples</h3><p>Palito de dente limpo permite coletar e transferir a massa de pólen com precisão.</p></article>
+            <article class="card"><h3>Resultado esperado</h3><p>Formação de vagens duplas, colheita de sementes e ganho genético para novos cruzamentos.</p></article>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Passo a passo detalhado">
+          <div class="section-heading">
+            <h2>Passo a Passo Detalhado</h2>
+            <p>Sequência operacional da abertura da flor até a validação do cruzamento.</p>
+          </div>
+          <ol class="poli-steps">
+            <li><strong>Preparação:</strong> use flores abertas há 2-3 dias, preferencialmente entre 8h e 11h.</li>
+            <li><strong>Acesso:</strong> abra lateralmente o tubo floral até visualizar o cone central.</li>
+            <li><strong>Coleta do pólen:</strong> retire a massa esbranquiçada/amarelada das anteras com palito.</li>
+            <li><strong>Fecundação:</strong> leve o pólen da planta A ao estigma da planta B e faça movimento suave.</li>
+            <li><strong>Conferência:</strong> monitore base floral e pedúnculo por 5-7 dias para validar sucesso.</li>
+          </ol>
+        </section>
+
+        <section class="section" aria-label="Resultado e colheita">
+          <div class="section-heading">
+            <h2>O que acontece depois</h2>
+            <p>Sinais para diferenciar falha de sucesso e proteger a produção de sementes.</p>
+          </div>
+          <table class="tabela">
+            <thead><tr><th>Fase</th><th>Sinal de Falha</th><th>Sinal de Sucesso</th></tr></thead>
+            <tbody>
+              <tr><td>5-7 dias</td><td>Flor cai e pedúnculo seca</td><td>Base da flor segue verde e firme</td></tr>
+              <tr><td>7-20 dias</td><td>Sem crescimento visível</td><td>Surgem duas vagens em formato de chifre</td></tr>
+              <tr><td>Maturação</td><td>Vagem abre e sementes voam</td><td>Amarrar com elástico/barbante antes de rachar</td></tr>
+            </tbody>
+          </table>
+        </section>
       </div>
     </section>
 
-    <section class="section" aria-label="Dashboard de polinização">
-      <h2>Dashboard de Polinização</h2>
-      <div class="graficos poli-graficos">
-        <div class="grafico"><h4>Taxa de Sucesso por Horário</h4><canvas id="poliHorarioChart"></canvas></div>
-        <div class="grafico"><h4>Evolução Pós-Polinização (dias)</h4><canvas id="poliEvolucaoChart"></canvas></div>
-        <div class="grafico"><h4>Risco Operacional</h4><canvas id="poliRiscoChart"></canvas></div>
-      </div>
-    </section>
+    <section class="plantio-media-showcase" id="resumo-visual-polinizacao">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Resumo Visual do Processo</h2>
+          <p>Do acesso ao cone floral até a formação da vagem: este resumo visual facilita a execução correta da polinização manual.</p>
+        </div>
+        <div class="poli-processo-destaque">
 
-    <section class="section" aria-label="Resultado e colheita">
-      <h2>O que acontece depois</h2>
-      <table class="tabela">
-        <thead>
-          <tr>
-            <th>Fase</th>
-            <th>Sinal de Falha</th>
-            <th>Sinal de Sucesso</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>5-7 dias</td>
-            <td>Flor cai e pedúnculo seca</td>
-            <td>Base da flor segue verde e firme</td>
-          </tr>
-          <tr>
-            <td>7-20 dias</td>
-            <td>Sem crescimento visível</td>
-            <td>Surgem duas vagens em formato de chifre</td>
-          </tr>
-          <tr>
-            <td>Maturação</td>
-            <td>Vagem abre e sementes voam</td>
-            <td>Amarrar com elástico/barbante antes de rachar</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="section" aria-label="Galeria técnica">
-      <h2>Formatos de Imagem para Visualização</h2>
-      <div class="poli-gallery">
-        <figure>
-          <img src="imagnes/plantio/passo_a_passo_polinizacao%20manual.jpg" alt="Passo a passo da polinizacao manual" />
-          <figcaption>Macro da flor aberta para acesso ao cone.</figcaption>
-        </figure>
-        <figure>
-          <img src="imagnes/plantio/plantiio__.jpg" alt="Coleta de polen" />
-          <figcaption>Close da coleta de pólen com palito limpo.</figcaption>
-        </figure>
-        <figure>
-          <img src="imagnes/plantio/plantio_.png" alt="Vagens de sementes" />
-          <figcaption>Registro da vagem em formação e pré-colheita.</figcaption>
-        </figure>
+          <article class="poli-bloco-visual">
+            <figure class="poli-foto-grande">
+              <img src="imagnes/plantio/passo_a_passo_polinizacao%20manual.jpg" alt="Abertura da flor para polinização manual" />
+            </figure>
+            <div class="poli-resumo-lado">
+              <h3>Como fazer a polinização manual</h3>
+              <p>Escolha flores com 2 a 3 dias de abertura — esse é o pico de receptividade do estigma. Use um pincel fino, palito ou a própria antera da flor doadora para transferir o pólen. Acesse o cone floral com leveza, sem forçar as pétalas. Realize o processo entre 8h e 11h para melhores resultados. Registre o cruzamento com etiqueta na planta (data + variedades cruzadas).</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section" aria-label="Simulador operacional">
-      <h2>Simulador de Probabilidade de Pegamento</h2>
-      <div class="card poli-simulador">
-        <p>Selecione condições de execução para estimar chance de formação de vagens.</p>
-        <div class="simulador-grid">
-          <label for="idadeFlorPoli">Idade da flor</label>
-          <select id="idadeFlorPoli">
-            <option value="otima">2-3 dias</option>
-            <option value="cedo">1 dia</option>
-            <option value="tarde">4+ dias</option>
-          </select>
-
-          <label for="horarioPoli">Horário</label>
-          <select id="horarioPoli">
-            <option value="ideal">8h-11h</option>
-            <option value="medio">11h-14h</option>
-            <option value="baixo">Após 14h</option>
-          </select>
-
-          <label class="checkline"><input id="amarrouVagem" type="checkbox" checked /> Planeja amarrar vagem antes da abertura</label>
+      <div class="container">
+        <div class="section-heading">
+          <h2>Simulador de Probabilidade de Pegamento</h2>
+          <p>Selecione condições de execução para estimar chance de formação de vagens.</p>
         </div>
-        <button id="calcularPoli" class="btn btn-primary">Calcular chance</button>
-        <div id="resultadoPoli" class="simulador-resultado">
-          <p><strong>Chance estimada de pegamento:</strong> 85%</p>
-          <p><strong>Risco de perda de sementes:</strong> Baixo</p>
-          <p><strong>Ação crítica:</strong> Registrar cruzamento e monitorar D+7.</p>
+        <div class="card poli-simulador">
+          <div class="simulador-grid">
+            <label for="idadeFlorPoli">Idade da flor</label>
+            <select id="idadeFlorPoli"><option value="otima">2-3 dias</option><option value="cedo">1 dia</option><option value="tarde">4+ dias</option></select>
+            <label for="horarioPoli">Horário</label>
+            <select id="horarioPoli"><option value="ideal">8h-11h</option><option value="medio">11h-14h</option><option value="baixo">Após 14h</option></select>
+            <label class="checkline"><input id="amarrouVagem" type="checkbox" checked /> Planeja amarrar vagem antes da abertura</label>
+          </div>
+          <button id="calcularPoli" class="btn btn-primary">Calcular chance</button>
+          <div id="resultadoPoli" class="simulador-resultado">
+            <p><strong>Chance estimada de pegamento:</strong> 85%</p>
+            <p><strong>Risco de perda de sementes:</strong> Baixo</p>
+            <p><strong>Ação crítica:</strong> Registrar cruzamento e monitorar D+7.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="conclusao">
+    <section class="conclusao container">
       <h2>Resumo técnico</h2>
       <p>Com flor no ponto certo, janela horária adequada e manipulação limpa, a polinização manual se torna previsível e escalável para produção de sementes e híbridos de alto valor.</p>
     </section>

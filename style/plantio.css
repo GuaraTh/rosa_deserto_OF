@@ -1,6 +1,7 @@
 /* Plantio - Estilos Específicos */
 
 .plantio-overview,
+.plantio-video-rapido,
 .guia-basico,
 .kpis,
 .metodos,
@@ -26,14 +27,90 @@
   margin: 0.35rem 0 0;
 }
 
+.plantio-video-rapido {
+  padding: 2.2rem 0 1.5rem;
+}
+
+.video-rapido-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.video-rapido-player {
+  background: #000;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  min-height: 260px;
+}
+
+.video-rapido-player iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  border: 0;
+}
+
+.video-rapido-player img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.video-rapido-info {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.video-rapido-info h3 {
+  margin: 0 0 0.55rem;
+  color: #4f3d2a;
+}
+
+.video-rapido-info ul {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.video-rapido-info li {
+  margin-bottom: 0.45rem;
+}
+
 .plantio-overview {
   padding: 2.5rem 0 1.5rem;
 }
 
 .plantio-overview-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+}
+
+.plantio-overview-flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overview-separacao {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  margin: 0 0 1rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+.overview-separacao-final {
+  margin-top: 1rem;
 }
 
 .overview-card {
@@ -43,6 +120,11 @@
   padding: 1.1rem;
   text-align: center;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  min-height: 205px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
 .overview-card span {
@@ -67,6 +149,34 @@
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+.overview-card small {
+  display: block;
+  margin-top: 0.55rem;
+  color: #6d6047;
+  font-size: 0.8rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.plantio-overview-flow.topic-carousel-track {
+  align-items: stretch;
+}
+
+.plantio-overview-flow .topic-carousel-item {
+  flex: 0 0 clamp(250px, 38vw, 340px);
+}
+
+@media (max-width: 640px) {
+  .plantio-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plantio-overview-flow .topic-carousel-item {
+    flex-basis: min(88vw, 320px);
+  }
 }
 
 .plantio-media-showcase {
@@ -93,6 +203,17 @@
   width: 100%;
   height: 220px;
   object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .video-rapido-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .video-rapido-player,
+  .video-rapido-player iframe {
+    min-height: 220px;
+  }
 }
 
 .plantio-photo-card.featured img {
@@ -156,6 +277,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin: 1.5rem 0;
+  justify-content: center;
 }
 
 .kpi {
@@ -186,6 +308,18 @@
   font-size: 0.9rem;
 }
 
+.dashboard-instrucoes {
+  padding: 2rem 0;
+}
+
+.dashboard-instrucoes .card {
+  text-align: left;
+}
+
+.dashboard-instrucoes .card h3 {
+  margin-top: 0;
+}
+
 .graficos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -210,6 +344,32 @@
   grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
   gap: 1.2rem;
   align-items: start;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.metodos-destaque {
+  background: linear-gradient(180deg, rgba(195, 122, 53, 0.08), rgba(195, 122, 53, 0.02));
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.metodos-destaque .section-heading h2 {
+  position: relative;
+  display: inline-block;
+  padding-right: 2.4rem;
+}
+
+.metodos-destaque .section-heading h2::after {
+  content: 'Destaque';
+  position: absolute;
+  right: 0;
+  top: -0.6rem;
+  font-size: 0.68rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.15rem 0.45rem;
 }
 
 .metodo-highlight {
@@ -235,6 +395,12 @@
   overflow: hidden;
 }
 
+.metodos-layout .comparativo,
+.solo-vaso-matriz .comparativo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .comparativo th {
   background: var(--accent);
   color: #fff;
@@ -246,6 +412,7 @@
 .comparativo td {
   padding: 1rem;
   border-bottom: 1px solid var(--border);
+  text-align: center;
 }
 
 .comparativo tr:hover {
@@ -290,6 +457,14 @@
   flex-wrap: wrap;
 }
 
+.transplante-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .timeline-item {
   flex: 1;
   min-width: 200px;
@@ -297,20 +472,12 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   border-top: 3px solid var(--accent);
+  text-align: center;
 }
 
 .timeline-item h3 {
   margin: 0 0 0.5rem 0;
   color: var(--text);
-}
-
-.caudex-shape {
-  width: 100px;
-  height: 150px;
-  background: linear-gradient(135deg, #c37a35 0%, #a85515 100%);
-  border-radius: 50%;
-  margin: 2rem auto 1rem;
-  box-shadow: 0 8px 20px rgba(195, 122, 53, 0.3);
 }
 
 .comparacao {
@@ -320,12 +487,45 @@
   margin-top: 1.5rem;
 }
 
+.solo-vaso-intro {
+  text-align: center;
+  color: var(--muted);
+  margin-top: -0.3rem;
+}
+
+.solo-vaso-heading {
+  max-width: 860px;
+}
+
+.comparacao-profissional {
+  margin-top: 1rem;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
+}
+
+.solo-vaso-matriz {
+  margin-top: 1rem;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.solo-vaso-matriz h3 {
+  margin: 0 0 0.75rem;
+  color: #4f3d2a;
+}
+
 .lado {
   background: var(--card);
   padding: 1.5rem;
   border-radius: 0.75rem;
   border: 1px solid var(--border);
   text-align: center;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 .lado h3 {
@@ -336,12 +536,15 @@
 .lado ul {
   list-style: none;
   padding: 0;
+  max-width: 280px;
+  margin: 0.8rem auto 0;
 }
 
 .lado li {
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
+  text-align: left;
 }
 
 .lado li:before {
@@ -352,6 +555,18 @@
   font-weight: 700;
 }
 
+.avancados {
+  text-align: center;
+}
+
+.avancados .container {
+  max-width: 920px;
+}
+
+.avancados h2 {
+  text-align: center;
+}
+
 details {
   margin: 1rem 0;
   padding: 1rem;
@@ -359,6 +574,9 @@ details {
   border-radius: 0.5rem;
   border-left: 3px solid var(--accent);
   cursor: pointer;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 summary {
@@ -377,6 +595,7 @@ details[open] summary {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
+  justify-items: center;
 }
 
 .estilo {
@@ -384,6 +603,8 @@ details[open] summary {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 280px;
 }
 
 .estilo:hover {
@@ -429,6 +650,51 @@ details[open] summary {
 .interatividade {
   padding: 2rem 0;
   text-align: center;
+}
+
+.simulador-pro .simulador-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: end;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.simulador-pro label {
+  display: grid;
+  gap: 0.45rem;
+  text-align: left;
+  font-weight: 600;
+  color: #4f3d2a;
+}
+
+.simulador-pro select {
+  width: 100%;
+  margin: 0;
+  min-height: 44px;
+}
+
+.simulador-pro #calcularSimulador {
+  min-height: 44px;
+}
+
+.simulador-resultado {
+  margin-top: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.simulador-resultado p {
+  margin: 0.3rem 0;
+  color: #5a4f3a;
 }
 
 select {
@@ -519,6 +785,10 @@ select {
 
   .metodos-layout {
     grid-template-columns: 1fr;
+  }
+
+  .metodo-highlight {
+    position: static;
   }
 
   .metodo-highlight {

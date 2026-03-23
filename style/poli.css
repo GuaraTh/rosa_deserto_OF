@@ -165,3 +165,121 @@
     font-size: 0.86rem;
   }
 }
+
+/* ===== ALINHAMENTO EM UMA RETA (ABA POLINIZACAO) ===== */
+.polinizacao-page .container {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.polinizacao-page .plantio-video-rapido .container,
+.polinizacao-page .plantio-overview .container,
+.polinizacao-page .plantio-media-showcase .container,
+.polinizacao-page .guia-basico .container,
+.polinizacao-page .dashboard-instrucoes .container,
+.polinizacao-page .section .container,
+.polinizacao-page .conclusao.container {
+  max-width: 920px;
+}
+
+.polinizacao-page .cards-grid,
+.polinizacao-page .kpi-grid,
+.polinizacao-page .grid-2,
+.polinizacao-page .plantio-photo-grid,
+.polinizacao-page .simulador-grid {
+  grid-template-columns: 1fr !important;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.polinizacao-page .video-rapido-layout {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.polinizacao-page .card,
+.polinizacao-page .kpi,
+.polinizacao-page .plantio-photo-card,
+.polinizacao-page .video-rapido-player,
+.polinizacao-page .video-rapido-info,
+.polinizacao-page .tabela,
+.polinizacao-page .poli-simulador,
+.polinizacao-page .simulador-resultado,
+.polinizacao-page .overview-separacao,
+.polinizacao-page .poli-steps {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.polinizacao-page .section-heading {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Resumo visual — layout grande com texto ao lado */
+.polinizacao-page .poli-processo-destaque {
+  display: grid;
+  gap: 1.4rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.polinizacao-page .poli-bloco-visual {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  border: 1px solid #e4d8c8;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.polinizacao-page .poli-foto-grande {
+  margin: 0;
+}
+
+.polinizacao-page .poli-foto-grande img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.polinizacao-page .poli-resumo-lado {
+  padding: 1.2rem 1.3rem;
+  display: grid;
+  align-content: center;
+  gap: 0.6rem;
+}
+
+.polinizacao-page .poli-resumo-lado h3 {
+  font-size: 1.05rem;
+  color: #4f3a22;
+  margin: 0;
+}
+
+.polinizacao-page .poli-resumo-lado p {
+  font-size: 0.9rem;
+  color: #5d4f3d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  .polinizacao-page .poli-bloco-visual {
+    grid-template-columns: 1fr;
+  }
+
+  .polinizacao-page .poli-foto-grande img {
+    min-height: 220px;
+    max-height: 280px;
+  }
+}

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="style/styles-base.css" />
   <link rel="stylesheet" href="style/styles-processo.css" />
+  <link rel="stylesheet" href="style/plantio.css" />
   <link rel="stylesheet" href="style/podas.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script defer src="script.js"></script>
@@ -30,195 +31,168 @@
     </div>
   </header>
 
-  <main class="container podas-page">
-    <section class="hero-podas">
-      <small>Protocolo Profissional | Adenium obesum</small>
-      <h1>Guia Completo de Poda da Rosa do Deserto</h1>
-      <p>Estruture podas com segurança, padronização e dados para reduzir perdas, estimular brotos e valorizar a planta.</p>
-    </section>
-
-    <section class="section" aria-label="Conceito e objetivo">
-      <h2>O que é a poda e por que fazer</h2>
-      <div class="cards-grid">
-        <article class="card"><h3>Estimular ramificação</h3><p>Cada corte pode gerar de 2 a 5 novos galhos, melhorando volume e arquitetura.</p></article>
-        <article class="card"><h3>Controlar formato</h3><p>Modela altura, direção dos ramos e equilíbrio visual da copa.</p></article>
-        <article class="card"><h3>Valorizar caudex e flor</h3><p>Melhora estética premium e induz mais pontos de floração.</p></article>
+  <main class="podas-page">
+    <section class="plantio-video-rapido" id="video-rapido">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Vídeo Rápido: Guia de Poda</h2>
+          <p>Segurança, padronização e leitura operacional em uma estrutura igual à aba de plantio.</p>
+        </div>
+        <div class="video-rapido-layout">
+          <div class="video-rapido-player">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Vídeo explicativo das etapas de poda da Rosa do Deserto"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <aside class="video-rapido-info">
+            <h3>O que você vai revisar</h3>
+            <ul>
+              <li>Objetivo da poda e janela ideal de execução.</li>
+              <li>Tipos de poda, passo a passo e cuidados de cicatrização.</li>
+              <li>KPIs, dashboard e tabela de erros operacionais.</li>
+              <li>Simulador, segurança e resposta por espécie.</li>
+            </ul>
+            <a href="#guia-podas" class="btn btn-primary">Ver Guia Técnico</a>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-label="Quando podar">
-      <h2>Quando fazer a poda</h2>
-      <div class="grid-2">
-        <article class="card destaque-ok">
-          <h3>Janela ideal</h3>
-          <ul>
-            <li>Setembro a março (primavera/verão).</li>
-            <li>Temperatura entre 25°C e 35°C.</li>
-            <li>Planta em crescimento ativo.</li>
-          </ul>
-        </article>
-        <article class="card destaque-alerta">
-          <h3>Evite podar</h3>
-          <ul>
-            <li>Inverno, frio intenso ou abaixo de 15°C.</li>
-            <li>Período de dormência.</li>
-            <li>Planta fraca, doente ou sob estresse hídrico.</li>
-          </ul>
-        </article>
+    <section class="guia-basico" id="guia-podas">
+      <div class="container">
+        <div class="section-heading hero-podas">
+          <small>Protocolo Profissional | Adenium obesum</small>
+          <h1>Guia Completo de Poda da Rosa do Deserto</h1>
+          <p>Estruture podas com segurança, padronização e dados para reduzir perdas, estimular brotos e valorizar a planta.</p>
+        </div>
+
+        <section class="section" aria-label="Conceito e objetivo">
+          <div class="section-heading">
+            <h2>O que é a poda e por que fazer</h2>
+            <p>Funções principais do corte no desenvolvimento e valorização da planta.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="card"><h3>Estimular ramificação</h3><p>Cada corte pode gerar de 2 a 5 novos galhos, melhorando volume e arquitetura.</p></article>
+            <article class="card"><h3>Controlar formato</h3><p>Modela altura, direção dos ramos e equilíbrio visual da copa.</p></article>
+            <article class="card"><h3>Valorizar caudex e flor</h3><p>Melhora estética premium e induz mais pontos de floração.</p></article>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Quando podar">
+          <div class="section-heading">
+            <h2>Quando fazer a poda</h2>
+            <p>Janela ideal e situações em que o corte deve ser evitado.</p>
+          </div>
+          <div class="grid-2">
+            <article class="card destaque-ok"><h3>Janela ideal</h3><ul><li>Setembro a março (primavera/verão).</li><li>Temperatura entre 25°C e 35°C.</li><li>Planta em crescimento ativo.</li></ul></article>
+            <article class="card destaque-alerta"><h3>Evite podar</h3><ul><li>Inverno, frio intenso ou abaixo de 15°C.</li><li>Período de dormência.</li><li>Planta fraca, doente ou sob estresse hídrico.</li></ul></article>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Tipos de poda">
+          <div class="section-heading">
+            <h2>Tipos de Poda</h2>
+            <p>Escolha a intervenção conforme objetivo estrutural e estético.</p>
+          </div>
+          <div class="cards-grid">
+            <article class="card"><h3>Formação</h3><p>Cria copa cheia e ramificada, ideal para plantas jovens e iniciantes.</p></article>
+            <article class="card"><h3>Estrutural</h3><p>Modela design e simetria, removendo galhos mal posicionados.</p></article>
+            <article class="card"><h3>Renovação (drástica)</h3><p>Remove partes velhas e reinicia vigor em plantas saudáveis.</p></article>
+            <article class="card"><h3>Floração</h3><p>Poda leve nas pontas para indução de ramos floríferos.</p></article>
+            <article class="card"><h3>Limpeza</h3><p>Remove galhos secos, partes doentes e folhagem comprometida.</p></article>
+            <article class="card"><h3>Raiz (avançada)</h3><p>Refina caudex e estética, geralmente com replantio controlado.</p></article>
+          </div>
+        </section>
+
+        <section class="section" aria-label="Passo a passo">
+          <div class="section-heading">
+            <h2>Como fazer a poda</h2>
+            <p>Procedimento técnico para executar o corte com previsibilidade.</p>
+          </div>
+          <ol class="podas-steps">
+            <li><strong>Ponto de corte:</strong> acima de um nó e mantendo 2-3 cm acima do caudex.</li>
+            <li><strong>Ferramenta limpa:</strong> lâmina nova/afiada esterilizada com álcool 70%.</li>
+            <li><strong>Corte correto:</strong> reto ou levemente inclinado (45°), sem esmagar o ramo.</li>
+            <li><strong>Proteção do corte:</strong> canela em pó, pasta cicatrizante ou selante.</li>
+            <li><strong>Sem rega imediata:</strong> aguardar 2-3 dias (ou protocolo seco de 3-7 dias).</li>
+          </ol>
+        </section>
+
+        <section class="section" aria-label="Erros e riscos">
+          <div class="section-heading">
+            <h2>Erros comuns, riscos e prevenção</h2>
+            <p>Tabela operacional para reduzir falhas recorrentes.</p>
+          </div>
+          <table class="tabela">
+            <thead><tr><th>Erro</th><th>Impacto</th><th>Prevenção</th></tr></thead>
+            <tbody>
+              <tr><td>Cortar abaixo do enxerto</td><td>Perda do cavaleiro/genética</td><td>Marcar ponto acima do enxerto antes do corte</td></tr>
+              <tr><td>Lâmina cega/suja</td><td>Rasgamento e contaminação</td><td>Esterilizar e usar lâmina afiada</td></tr>
+              <tr><td>Regar logo após poda</td><td>Apodrecimento e fungos</td><td>Período seco de 3 a 7 dias</td></tr>
+              <tr><td>Podas superficiais</td><td>Baixo estímulo de brotação</td><td>Cortes significativos e planejados</td></tr>
+              <tr><td>Desequilíbrio de espessuras</td><td>Copa desformada</td><td>Equilibrar galhos grossos e finos</td></tr>
+            </tbody>
+          </table>
+        </section>
       </div>
     </section>
 
-    <section class="section" aria-label="Tipos de poda">
-      <h2>Tipos de Poda</h2>
-      <div class="cards-grid">
-        <article class="card"><h3>Formação</h3><p>Cria copa cheia e ramificada, ideal para plantas jovens e iniciantes.</p></article>
-        <article class="card"><h3>Estrutural</h3><p>Modela design e simetria, removendo galhos mal posicionados.</p></article>
-        <article class="card"><h3>Renovação (drástica)</h3><p>Remove partes velhas e reinicia vigor em plantas saudáveis.</p></article>
-        <article class="card"><h3>Floração</h3><p>Poda leve nas pontas para indução de ramos floríferos.</p></article>
-        <article class="card"><h3>Limpeza</h3><p>Remove galhos secos, partes doentes e folhagem comprometida.</p></article>
-        <article class="card"><h3>Raiz (avançada)</h3><p>Refina caudex e estética, geralmente com replantio controlado.</p></article>
+    <section class="plantio-media-showcase" id="resumo-visual-podas">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Resumo Visual do Processo</h2>
+          <p>As imagens destacam o antes, o corte técnico e a recuperação da planta para uma poda segura, previsível e com melhor brotação.</p>
+        </div>
+        <div class="plantio-photo-grid podas-gallery">
+          <figure class="plantio-photo-card"><img src="imagnes/Fotos Poda/WhatsApp Image 2026-03-19 at 23.36.52.jpeg" alt="Arquitetura antes da poda" /><figcaption>Leitura inicial da arquitetura da planta.</figcaption></figure>
+          <figure class="plantio-photo-card"><img src="imagnes/Fotos Poda/WhatsApp Image 2026-03-19 at 23.36.53 (1).jpeg" alt="Corte tecnico de poda" /><figcaption>Corte limpo com ferramenta esterilizada.</figcaption></figure>
+          <figure class="plantio-photo-card"><img src="imagnes/Fotos Poda/WhatsApp Image 2026-03-19 at 23.36.53 (2).jpeg" alt="Recuperacao e brotacao apos poda" /><figcaption>Recuperação e nova brotação após manejo.</figcaption></figure>
+        </div>
       </div>
-    </section>
-
-    <section class="section" aria-label="Passo a passo">
-      <h2>Como fazer a poda (passo a passo)</h2>
-      <ol class="podas-steps">
-        <li><strong>Ponto de corte:</strong> acima de um nó e mantendo 2-3 cm acima do caudex.</li>
-        <li><strong>Ferramenta limpa:</strong> lâmina nova/afiada esterilizada com álcool 70%.</li>
-        <li><strong>Corte correto:</strong> reto ou levemente inclinado (45°), sem esmagar o ramo.</li>
-        <li><strong>Proteção do corte:</strong> canela em pó, pasta cicatrizante ou selante.</li>
-        <li><strong>Sem rega imediata:</strong> aguardar 2-3 dias (ou protocolo seco de 3-7 dias).</li>
-      </ol>
-    </section>
-
-    <section class="section" aria-label="KPIs de poda">
-      <h2>KPIs Operacionais</h2>
-      <div class="kpi-grid">
-        <article class="kpi"><h3>Novos brotos</h3><p>2 a 5 por corte</p></article>
-        <article class="kpi"><h3>Início de brotação</h3><p>7 a 30 dias</p></article>
-        <article class="kpi"><h3>Cicatrização inicial</h3><p>3 a 7 dias</p></article>
-        <article class="kpi"><h3>Cicatrização total</h3><p>até 14 dias</p></article>
-        <article class="kpi"><h3>Perdas com protocolo</h3><p>&lt; 5%</p></article>
-        <article class="kpi"><h3>Temperatura ideal</h3><p>25°C a 35°C</p></article>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Gráficos de poda">
-      <h2>Dashboard de Poda</h2>
-      <div class="graficos podas-graficos">
-        <div class="grafico"><h4>Tempo de Recuperação por Tipo</h4><canvas id="podasTempoChart"></canvas></div>
-        <div class="grafico"><h4>Risco por Erro Operacional</h4><canvas id="podasRiscoChart"></canvas></div>
-        <div class="grafico"><h4>Resposta por Espécie</h4><canvas id="podasEspecieChart"></canvas></div>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Galeria de referência">
-      <h2>Formatos de Imagens para Visualização</h2>
-      <div class="podas-gallery">
-        <figure>
-          <img src="imagnes/plantio/plantio.jpg" alt="Poda de formação em copa" />
-          <figcaption>Plano geral da arquitetura antes e depois da poda.</figcaption>
-        </figure>
-        <figure>
-          <img src="imagnes/plantio/plantiio__.jpg" alt="Corte técnico com ferramenta esterilizada" />
-          <figcaption>Close técnico do corte limpo e selagem correta.</figcaption>
-        </figure>
-        <figure>
-          <img src="imagnes/plantio/plantio_.png" alt="Brotos após poda" />
-          <figcaption>Sequência de brotação entre D+7 e D+30.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section" aria-label="Erros e riscos">
-      <h2>Erros comuns, riscos e prevenção</h2>
-      <table class="tabela">
-        <thead>
-          <tr>
-            <th>Erro</th>
-            <th>Impacto</th>
-            <th>Prevenção</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cortar abaixo do enxerto</td>
-            <td>Perda do cavaleiro/genética</td>
-            <td>Marcar ponto acima do enxerto antes do corte</td>
-          </tr>
-          <tr>
-            <td>Lâmina cega/suja</td>
-            <td>Rasgamento e contaminação</td>
-            <td>Esterilizar e usar lâmina afiada</td>
-          </tr>
-          <tr>
-            <td>Regar logo após poda</td>
-            <td>Apodrecimento e fungos</td>
-            <td>Período seco de 3 a 7 dias</td>
-          </tr>
-          <tr>
-            <td>Podas superficiais</td>
-            <td>Baixo estímulo de brotação</td>
-            <td>Cortes significativos e planejados</td>
-          </tr>
-          <tr>
-            <td>Desequilíbrio de espessuras</td>
-            <td>Copa desformada</td>
-            <td>Equilibrar galhos grossos e finos</td>
-          </tr>
-        </tbody>
-      </table>
     </section>
 
     <section class="section" aria-label="Simulador de decisão">
-      <h2>Simulador de Recomendação de Poda</h2>
-      <div class="card podas-simulador">
-        <p>Selecione seu objetivo e estágio da planta para receber recomendação operacional.</p>
-        <div class="simulador-grid">
-          <label for="objetivoPoda">Objetivo</label>
-          <select id="objetivoPoda">
-            <option value="formacao">Planta bonita e cheia</option>
-            <option value="estrutura">Estética profissional</option>
-            <option value="renovacao">Rejuvenescer planta velha</option>
-            <option value="floracao">Aumentar flores</option>
-            <option value="saude">Limpeza e saúde</option>
-          </select>
-
-          <label for="estagioPoda">Estágio da planta</label>
-          <select id="estagioPoda">
-            <option value="jovem">Jovem</option>
-            <option value="adulta">Adulta</option>
-            <option value="enxertada">Enxertada</option>
-          </select>
+      <div class="container">
+        <div class="section-heading">
+          <h2>Simulador de Recomendação de Poda</h2>
+          <p>Selecione seu objetivo e estágio da planta para receber recomendação operacional.</p>
         </div>
-        <button class="btn btn-primary" id="calcularPoda">Gerar recomendação</button>
-        <div id="resultadoPoda" class="simulador-resultado">
-          <p><strong>Tipo recomendado:</strong> Formação</p>
-          <p><strong>Janela ideal:</strong> Primavera</p>
-          <p><strong>Risco:</strong> Baixo, com ferramenta esterilizada e período seco.</p>
+        <div class="card podas-simulador">
+          <div class="simulador-grid">
+            <label for="objetivoPoda">Objetivo</label>
+            <select id="objetivoPoda"><option value="formacao">Planta bonita e cheia</option><option value="estrutura">Estética profissional</option><option value="renovacao">Rejuvenescer planta velha</option><option value="floracao">Aumentar flores</option><option value="saude">Limpeza e saúde</option></select>
+            <label for="estagioPoda">Estágio da planta</label>
+            <select id="estagioPoda"><option value="jovem">Jovem</option><option value="adulta">Adulta</option><option value="enxertada">Enxertada</option></select>
+          </div>
+          <button class="btn btn-primary" id="calcularPoda">Gerar recomendação</button>
+          <div id="resultadoPoda" class="simulador-resultado">
+            <p><strong>Tipo recomendado:</strong> Formação</p>
+            <p><strong>Janela ideal:</strong> Primavera</p>
+            <p><strong>Risco:</strong> Baixo, com ferramenta esterilizada e período seco.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" aria-label="Segurança e espécies">
-      <h2>Segurança e variações entre espécies</h2>
-      <div class="grid-2">
-        <article class="card aviso-toxicidade">
-          <h3>Segurança</h3>
-          <p>A seiva da Rosa do Deserto é tóxica. Use luvas e evite contato com olhos e pele.</p>
-        </article>
-        <article class="card">
-          <h3>Resposta por espécie</h3>
-          <ul>
-            <li><strong>Adenium obesum:</strong> resposta rápida e alta ramificação.</li>
-            <li><strong>Adenium arabicum:</strong> crescimento mais lento, evitar agressividade.</li>
-            <li><strong>Adenium multiflorum:</strong> foco em floração, poda excessiva reduz flores.</li>
-          </ul>
-        </article>
+      <div class="container">
+        <div class="section-heading">
+          <h2>Segurança e variações entre espécies</h2>
+          <p>Cuidados com toxicidade e diferenças de resposta entre espécies.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card aviso-toxicidade"><h3>Segurança</h3><p>A seiva da Rosa do Deserto é tóxica. Use luvas e evite contato com olhos e pele.</p></article>
+          <article class="card"><h3>Resposta por espécie</h3><ul><li><strong>Adenium obesum:</strong> resposta rápida e alta ramificação.</li><li><strong>Adenium arabicum:</strong> crescimento mais lento, evitar agressividade.</li><li><strong>Adenium multiflorum:</strong> foco em floração, poda excessiva reduz flores.</li></ul></article>
+        </div>
       </div>
     </section>
 
-    <section class="conclusao">
+    <section class="conclusao container">
       <h2>Resumo prático</h2>
       <p>Aplicando época correta, corte limpo, cicatrização protegida e período seco, o processo de poda se torna previsível e seguro, com perdas abaixo de 5% em operação bem conduzida.</p>
     </section>
