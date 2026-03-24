@@ -451,6 +451,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function initTopicCarousels() {
+    const page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const carouselPages = new Set(['index.html', 'plantio.html', '']);
+    if (!carouselPages.has(page)) return;
+
     const selectors = [
       '.cards-grid',
       '.kpi-grid',

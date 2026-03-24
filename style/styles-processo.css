@@ -349,3 +349,68 @@ details[open] summary {
 .dashboard-cards {
   margin-top: 1rem;
 }
+
+/* Fotos com introducao lateral para abas de processo (exceto index/plantio) */
+.caudex-page .plantio-photo-grid,
+.mudas-page .plantio-photo-grid,
+.podas-page .plantio-photo-grid,
+.crescimento-page .plantio-photo-grid,
+.logistica-page .plantio-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.caudex-page .plantio-photo-card,
+.mudas-page .plantio-photo-card,
+.podas-page .plantio-photo-card,
+.crescimento-page .plantio-photo-card,
+.logistica-page .plantio-photo-card {
+  max-width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(230px, 340px) 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem;
+}
+
+.caudex-page .plantio-photo-card img,
+.mudas-page .plantio-photo-card img,
+.podas-page .plantio-photo-card img,
+.crescimento-page .plantio-photo-card img,
+.logistica-page .plantio-photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.caudex-page .plantio-photo-card figcaption,
+.mudas-page .plantio-photo-card figcaption,
+.podas-page .plantio-photo-card figcaption,
+.crescimento-page .plantio-photo-card figcaption,
+.logistica-page .plantio-photo-card figcaption {
+  text-align: left;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .caudex-page .plantio-photo-card,
+  .mudas-page .plantio-photo-card,
+  .podas-page .plantio-photo-card,
+  .crescimento-page .plantio-photo-card,
+  .logistica-page .plantio-photo-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .caudex-page .plantio-photo-card figcaption,
+  .mudas-page .plantio-photo-card figcaption,
+  .podas-page .plantio-photo-card figcaption,
+  .crescimento-page .plantio-photo-card figcaption,
+  .logistica-page .plantio-photo-card figcaption {
+    text-align: center;
+  }
+}
